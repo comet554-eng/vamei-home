@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>医疗器械出海销售支持工作台</title>
+    <meta
+      name="description"
+      content="医疗器械出海业务的客户管理、合规资料、上新素材与供应协同工作台"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./calm.css?v=1" />
+    <link rel="stylesheet" href="./inquiry.css" />
+    <link rel="stylesheet" href="./registry.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <div class="brand">
+          <div class="brand-mark"><i data-lucide="cross"></i></div>
+          <div>
+            <strong>MedBridge</strong>
+            <span>Sales Ops OS</span>
+          </div>
+        </div>
+
+        <div class="workspace-switcher">
+          <div class="workspace-avatar">M</div>
+          <div class="workspace-copy">
+            <strong>海外销售中心</strong>
+            <span>华东 · 运营组</span>
+          </div>
+          <i data-lucide="chevrons-up-down"></i>
+        </div>
+
+        <nav class="primary-nav" aria-label="主导航">
+          <p class="nav-label">工作台</p>
+          <button class="nav-item active" data-view="overview">
+            <i data-lucide="layout-dashboard"></i><span>业务总览</span>
+            <span class="nav-count">4</span>
+          </button>
+          <button class="nav-item" data-view="customers">
+            <i data-lucide="users-round"></i><span>客户与回访</span>
+          </button>
+          <button class="nav-item" data-view="inquiry">
+            <i data-lucide="messages-square"></i><span>询盘助手</span>
+            <span class="nav-count">AI</span>
+          </button>
+          <button class="nav-item" data-view="content">
+            <i data-lucide="sparkles"></i><span>上新素材库</span>
+          </button>
+          <button class="nav-item" data-view="compliance">
+            <i data-lucide="shield-check"></i><span>合规资料库</span>
+            <span class="nav-count warning">3</span>
+          </button>
+          <button class="nav-item" data-view="supply">
+            <i data-lucide="boxes"></i><span>采购与库存</span>
+            <span class="nav-count danger">2</span>
+          </button>
+
+          <p class="nav-label nav-label-spaced">系统</p>
+          <button class="nav-item" data-view="settings">
+            <i data-lucide="settings-2"></i><span>工作台设置</span>
+          </button>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="sync-status"><span></span> 数据已同步 · 2 分钟前</div>
+          <div class="user-card">
+            <div class="user-avatar">林</div>
+            <div>
+              <strong>林晓</strong>
+              <span>销售运营</span>
+            </div>
+            <button class="icon-button quiet" title="更多账户操作" aria-label="更多账户操作">
+              <i data-lucide="more-horizontal"></i>
+            </button>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <button class="mobile-menu icon-button" id="mobileMenu" title="打开导航" aria-label="打开导航">
+            <i data-lucide="menu"></i>
+          </button>
+          <div class="breadcrumbs">
+            <span>海外销售中心</span><i data-lucide="chevron-right"></i><strong id="breadcrumbCurrent">业务总览</strong>
+          </div>
+          <div class="topbar-actions">
+            <label class="global-search">
+              <i data-lucide="search"></i>
+              <input id="globalSearch" type="search" placeholder="搜索客户、订单或文件..." />
+              <kbd>⌘ K</kbd>
+            </label>
+            <button class="icon-button notification-button" title="通知" aria-label="通知" aria-expanded="false">
+              <i data-lucide="bell"></i><span class="notification-dot"></span>
+            </button>
+            <button class="avatar-button" title="林晓的账户" aria-label="林晓的账户">林</button>
+          </div>
+        </header>
+
+        <aside class="notification-panel" id="notificationPanel" aria-label="通知中心" hidden>
+          <div class="notification-heading"><strong>通知中心</strong><button class="text-button" id="clearNotifications">全部标为已读</button></div>
+          <button class="notification-item" data-view-link="customers"><span class="notification-icon amber"><i data-lucide="clock-3"></i></span><span><strong>Medline Gulf 样品询盘待回复</strong><small>已逾期 1 天 · 阿联酋</small></span></button>
+          <button class="notification-item" data-view-link="compliance"><span class="notification-icon blue"><i data-lucide="file-check-2"></i></span><span><strong>HealthPlus 注册资料待补</strong><small>需要营业执照 · 沙特</small></span></button>
+          <button class="notification-item" data-view-link="supply"><span class="notification-icon coral"><i data-lucide="triangle-alert"></i></span><span><strong>库存缺口需要关注</strong><small>预计下季度缺口 1,200 件</small></span></button>
+          <p class="notification-empty" hidden>暂无未读通知</p>
+        </aside>
+
+        <div class="page-content">
+          <section class="view active" id="view-overview">
+            <div class="page-heading">
+              <div>
+                <p class="eyebrow">SATURDAY · OCT 31, 2026</p>
+                <h1>早上好，林晓<span class="heading-dot">。</span></h1>
+                <p class="subheading">今天有 4 项工作需要优先处理，供应链预警仍在可控范围内。</p>
+              </div>
+              <div class="heading-actions">
+                <button class="button secondary" data-action="export">
+                  <i data-lucide="download"></i>导出简报
+                </button>
+                <button class="button primary" data-action="new-customer">
+                  <i data-lucide="plus"></i>新增客户
+                </button>
+              </div>
+            </div>
+
+            <div class="metric-grid">
+              <article class="metric-card">
+                <div class="metric-icon teal"><i data-lucide="users"></i></div>
+                <div class="metric-meta"><span>活跃客户</span><strong>128</strong></div>
+                <div class="metric-trend positive"><i data-lucide="trending-up"></i> 12.4%</div>
+                <div class="sparkline teal-line"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+              </article>
+              <article class="metric-card">
+                <div class="metric-icon amber"><i data-lucide="clock-3"></i></div>
+                <div class="metric-meta"><span>待回访任务</span><strong>16</strong></div>
+                <div class="metric-trend warning"><i data-lucide="minus"></i> 3 项逾期</div>
+                <div class="sparkline amber-line"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+              </article>
+              <article class="metric-card">
+                <div class="metric-icon blue"><i data-lucide="file-check-2"></i></div>
+                <div class="metric-meta"><span>合规资料可用率</span><strong>86%</strong></div>
+                <div class="metric-trend positive"><i data-lucide="trending-up"></i> 4.8%</div>
+                <div class="sparkline blue-line"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+              </article>
+              <article class="metric-card">
+                <div class="metric-icon coral"><i data-lucide="triangle-alert"></i></div>
+                <div class="metric-meta"><span>库存缺口预警</span><strong>02</strong></div>
+                <div class="metric-trend danger"><i data-lucide="arrow-up-right"></i> 需关注</div>
+                <div class="sparkline coral-line"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+              </article>
+            </div>
+
+            <div class="overview-grid">
+              <section class="panel followup-panel">
+                <div class="panel-heading">
+                  <div>
+                    <p class="section-kicker">今日待办</p>
+                    <h2>优先跟进</h2>
+                  </div>
+                  <button class="text-button" data-view-link="customers">查看全部 <i data-lucide="arrow-up-right"></i></button>
+                </div>
+                <div class="task-list">
+                  <div class="task-row">
+                    <div class="task-check amber-border"></div>
+                    <div class="task-main">
+                      <strong>回复 Medline Gulf 的样品询盘</strong>
+                      <span>阿联酋 · B 级客户 · 预计采购 2,000 件</span>
+                    </div>
+                    <span class="due-label overdue">已逾期 1 天</span>
+                    <button class="icon-button quiet complete-task" title="标记完成" aria-label="标记完成"><i data-lucide="check"></i></button>
+                  </div>
+                  <div class="task-row">
+                    <div class="task-check blue-border"></div>
+                    <div class="task-main">
+                      <strong>确认 K-Health 年度合同规则</strong>
+                      <span>韩国 · A 级客户 · 首年采购额 1 万</span>
+                    </div>
+                    <span class="due-label today">今天 14:00</span>
+                    <button class="icon-button quiet complete-task" title="标记完成" aria-label="标记完成"><i data-lucide="check"></i></button>
+                  </div>
+                  <div class="task-row">
+                    <div class="task-check teal-border"></div>
+                    <div class="task-main">
+                      <strong>跟进 HealthPlus 注册资料</strong>
+                      <span>沙特 · C 级客户 · 等待营业执照</span>
+                    </div>
+                    <span class="due-label upcoming">明天</span>
+                    <button class="icon-button quiet complete-task" title="标记完成" aria-label="标记完成"><i data-lucide="check"></i></button>
+                  </div>
+                </div>
+              </section>
+
+              <section class="panel pipeline-panel">
+                <div class="panel-heading">
+                  <div>
+                    <p class="section-kicker">销售漏斗</p>
+                    <h2>本月询盘转化</h2>
+                  </div>
+                  <button class="icon-button quiet" title="更多数据" aria-label="更多数据"><i data-lucide="more-horizontal"></i></button>
+                </div>
+                <div class="pipeline-total"><strong>¥ 482,600</strong><span class="positive-text"><i data-lucide="trending-up"></i> 18.6%</span></div>
+                <div class="bar-chart">
+                  <div class="bar-wrap"><span class="bar" style="height: 42%"></span><small>询盘</small></div>
+                  <div class="bar-wrap"><span class="bar active" style="height: 68%"></span><small>报价</small></div>
+                  <div class="bar-wrap"><span class="bar" style="height: 54%"></span><small>样品</small></div>
+                  <div class="bar-wrap"><span class="bar" style="height: 81%"></span><small>成交</small></div>
+                  <div class="bar-wrap"><span class="bar" style="height: 61%"></span><small>复购</small></div>
+                </div>
+              </section>
+            </div>
+
+            <section class="panel alert-panel">
+              <div class="panel-heading">
+                <div>
+                  <p class="section-kicker">规则提醒</p>
+                  <h2>需要留意的合同与库存</h2>
+                </div>
+                <span class="panel-badge">4 条提醒</span>
+              </div>
+              <div class="alert-grid">
+                <div class="alert-item contract-alert">
+                  <div class="alert-symbol"><i data-lucide="file-warning"></i></div>
+                  <div><strong>K-Health · 发货前规则确认</strong><span>合作第一年，需满足首年采购额 ¥10,000；当前已完成 72%。</span></div>
+                  <button class="icon-button quiet" title="查看详情" aria-label="查看详情"><i data-lucide="chevron-right"></i></button>
+                </div>
+                <div class="alert-item inventory-alert">
+                  <div class="alert-symbol"><i data-lucide="package-open"></i></div>
+                  <div><strong>一次性使用输液器 · 库存缺口</strong><span>预计下季度缺口 1,200 件，建议本周排产。</span></div>
+                  <button class="icon-button quiet" data-view-link="supply" title="查看供应链" aria-label="查看供应链"><i data-lucide="chevron-right"></i></button>
+                </div>
+              </div>
+            </section>
+          </section>
+
+          <section class="view" id="view-customers">
+            <div class="page-heading compact">
+              <div><p class="eyebrow">CUSTOMER ASSETS</p><h1>客户与回访</h1><p class="subheading">把客户档案、合同规则和下一次动作放在同一张桌面上。</p></div>
+              <div class="heading-actions"><button class="button primary" data-action="new-customer"><i data-lucide="plus"></i>新增客户</button></div>
+            </div>
+            <div class="toolbar">
+              <label class="local-search"><i data-lucide="search"></i><input id="customerSearch" placeholder="搜索客户名称、国家或邮箱..." /></label>
+              <div class="segmented-control"><button class="active" data-customer-filter="all">全部 <span>128</span></button><button data-customer-filter="followup">待回访 <span>16</span></button><button data-customer-filter="risk">有风险 <span>4</span></button></div>
+              <button class="button secondary compact-button"><i data-lucide="sliders-horizontal"></i>筛选</button>
+            </div>
+            <section class="panel table-panel">
+              <div class="table-heading"><div><strong>客户资产</strong><span>共 128 条记录</span></div><button class="text-button" data-action="export"><i data-lucide="download"></i> 导出列表</button></div>
+              <div class="table-scroll"><table><thead><tr><th>客户</th><th>国家 / 来源</th><th>分级</th><th>合同状态</th><th>下一步动作</th><th>负责人</th><th></th></tr></thead><tbody id="customerRows"></tbody></table></div>
+            </section>
+          </section>
+
+          <section class="view" id="view-inquiry">
+            <div class="page-heading compact">
+              <div><p class="eyebrow">INQUIRY ASSISTANT</p><h1>询盘助手</h1><p class="subheading">贴入买家询盘，AI 起草回复，规则引擎标出合规、平台和合同风险；业务员确认后再发送。</p></div>
+              <div class="heading-actions"><span class="status-chip review" id="iqStatus">连接中…</span></div>
+            </div>
+            <div class="iq-hint" id="iqOffline" hidden>没连上询盘后端。请在项目根目录运行 <code>python app/server.py</code>，再打开 http://127.0.0.1:8766/#inquiry 。</div>
+            <div class="iq-layout">
+              <section class="panel iq-input-panel">
+                <div class="panel-heading"><div><p class="section-kicker">BUYER INQUIRY</p><h2>输入询盘</h2></div><span class="security-note"><i data-lucide="lock"></i>人工确认后发送</span></div>
+                <label class="field-label">示例询盘<select id="iqSample"><option value="">— 选择示例询盘 —</option></select></label>
+                <div class="field-row">
+                  <label class="field-label">渠道<select id="iqChannel"><option value="alibaba">阿里国际站</option><option value="email">邮件</option></select></label>
+                  <label class="field-label">回复语言<select id="iqLang"><option value="auto">自动</option><option value="en">English</option><option value="es">Español</option></select></label>
+                </div>
+                <label class="field-label">询盘内容<textarea id="iqInquiry" placeholder="粘贴买家询盘，任何语言"></textarea></label>
+                <button class="button primary full-width" id="iqRun"><i data-lucide="sparkles"></i><span id="iqRunText">理解并生成回复</span></button>
+              </section>
+              <section class="panel">
+                <div class="panel-heading"><div><p class="section-kicker">AI DRAFT</p><h2>回复草稿</h2></div><span class="status-chip review" id="iqLevelChip">未运行</span></div>
+                <div class="iq-body">
+                  <div class="iq-rounds" id="iqRounds"></div>
+                  <div class="iq-reply" id="iqReplyView"></div>
+                  <textarea class="iq-reply" id="iqReplyEdit" rows="14" hidden></textarea>
+                  <details class="iq-fold" id="iqZhBox" hidden><summary>中文对照</summary><pre id="iqZh"></pre></details>
+                  <details class="iq-fold" id="iqDiffBox" hidden><summary>和上一轮对比</summary><div class="iq-diff" id="iqDiff"></div></details>
+                  <div class="iq-iterate">
+                    <label class="field-label">修改要求（中文）<textarea id="iqInstruction" placeholder="例如：语气正式点；只推面部用途；独家代理转经理"></textarea></label>
+                    <div class="iq-hint" id="iqMockHint" hidden>未配置模型：修改指令不会生效。请点「编辑回复」手改，再点「重新校验」。</div>
+                    <div class="iq-actions">
+                      <button class="button primary" id="iqRevise">按指令修改</button>
+                      <button class="button secondary" id="iqFix">按校验意见修改</button>
+                      <button class="button secondary" id="iqEdit">编辑回复</button>
+                      <button class="button secondary" id="iqRecheck" hidden>重新校验</button>
+                      <button class="button iq-danger" id="iqRisky" hidden>插入风险话术（演示）</button>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="iq-bottom">
+              <section class="panel">
+                <div class="panel-heading"><div><p class="section-kicker">COMPLIANCE CHECK</p><h2>校验与反馈</h2></div><span class="panel-badge">11 条规则</span></div>
+                <div class="iq-level" id="iqLevel">—</div>
+                <div class="iq-body" id="iqFindings"></div>
+              </section>
+              <section class="panel">
+                <div class="panel-heading"><div><p class="section-kicker">UNDERSTANDING</p><h2>理解与知识库调用</h2></div></div>
+                <div class="iq-body" id="iqUnderstanding"></div>
+              </section>
+              <section class="panel">
+                <div class="panel-heading"><div><p class="section-kicker">DATA FLOW</p><h2>数据流</h2></div></div>
+                <div class="iq-body"><ol class="iq-trace" id="iqTrace"></ol></div>
+              </section>
+            </div>
+          </section>
+
+          <section class="view" id="view-content">
+            <div class="page-heading compact">
+              <div><p class="eyebrow">CONTENT STUDIO</p><h1>上新素材库</h1><p class="subheading">用产品参数快速组合一套适合海外买家的上架内容。</p></div>
+              <div class="heading-actions"><button class="button secondary"><i data-lucide="folder-plus"></i>新建素材夹</button></div>
+            </div>
+            <div class="content-layout">
+              <section class="panel generator-panel">
+                <div class="panel-heading"><div><p class="section-kicker">AI CONTENT BUILDER</p><h2>生成上架方案</h2></div><span class="ai-status"><span></span>模型已就绪</span></div>
+                <label class="field-label">产品名称<input id="productName" value="一次性无菌输液器" /></label>
+                <div class="field-row"><label class="field-label">产品类别<select id="productCategory"><option>输液与注射</option><option>呼吸护理</option><option>手术耗材</option></select></label><label class="field-label">目标市场<select id="targetMarket"><option>阿联酋 / GCC</option><option>东南亚</option><option>拉美</option></select></label></div>
+                <label class="field-label">核心参数<textarea id="productParams">EO sterilized, DEHP-free, 20 drops/ml, latex-free, 150cm tube, ISO 8536 compliant</textarea></label>
+                <div class="upload-box"><i data-lucide="image-plus"></i><div><strong>拖入产品图片</strong><span>支持 JPG / PNG，最多 8 张</span></div><button class="button secondary compact-button">选择文件</button></div>
+                <button class="button primary full-width" id="generateContent"><i data-lucide="sparkles"></i>生成英文上架包</button>
+              </section>
+              <section class="panel preview-panel">
+                <div class="panel-heading"><div><p class="section-kicker">GENERATED PREVIEW</p><h2>上架方案预览</h2></div><button class="icon-button quiet" title="复制全部内容" aria-label="复制全部内容" id="copyContent"><i data-lucide="copy"></i></button></div>
+                <div class="preview-content" id="contentPreview">
+                  <div class="preview-label">TITLE</div><h3 id="previewTitle">Sterile DEHP-Free IV Infusion Set | ISO 8536 Compliant Medical Disposable</h3>
+                  <div class="preview-label">KEY SELLING POINTS</div>
+                  <ul id="previewBullets"><li>DEHP-free and latex-free materials for safer clinical use</li><li>EO sterilized with individually sealed packaging</li><li>20 drops/ml precision flow rate for consistent delivery</li><li>150cm flexible tube supports comfortable patient positioning</li><li>Reliable quality backed by ISO 8536 compliance</li></ul>
+                  <div class="preview-label">DESCRIPTION</div><p id="previewDescription">Designed for reliable fluid delivery in hospitals, clinics, and home-care settings. This sterile IV infusion set combines a DEHP-free construction with a flexible 150cm tube, helping distributors meet practical clinical needs while maintaining consistent quality across high-volume procurement.</p>
+                </div>
+                <div class="preview-footer"><span><i data-lucide="check-circle-2"></i>已完成英文润色</span><button class="text-button" id="copyText">复制文本 <i data-lucide="copy"></i></button></div>
+              </section>
+            </div>
+            <section class="panel asset-library"><div class="panel-heading"><div><p class="section-kicker">ASSET LIBRARY</p><h2>最近使用的素材</h2></div><button class="text-button">查看全部 <i data-lucide="arrow-up-right"></i></button></div><div class="asset-grid"><div class="asset-card image-card blue-bg"><div class="asset-visual"><i data-lucide="syringe"></i></div><strong>IV Infusion Set</strong><span>8 张图片 · 3 个文案</span></div><div class="asset-card image-card mint-bg"><div class="asset-visual"><i data-lucide="heart-pulse"></i></div><strong>Pulse Oximeter</strong><span>12 张图片 · 5 个文案</span></div><div class="asset-card image-card sand-bg"><div class="asset-visual"><i data-lucide="stethoscope"></i></div><strong>Exam Gloves</strong><span>6 张图片 · 2 个文案</span></div><div class="asset-card add-asset"><i data-lucide="plus"></i><strong>添加素材</strong><span>上传图片或文案</span></div></div></section>
+          </section>
+
+          <section class="view" id="view-compliance">
+            <div class="page-heading compact">
+              <div><p class="eyebrow">COMPLIANCE MATCHING</p><h1>合规资料库</h1><p class="subheading">根据客户需求快速匹配可立即提供的注册文件，并保留人工复核节点。</p></div>
+              <div class="heading-actions"><button class="button secondary"><i data-lucide="upload"></i>上传资料</button><button class="button primary" data-action="run-compliance"><i data-lucide="sparkles"></i>新建匹配</button></div>
+            </div>
+            <div class="compliance-layout">
+              <section class="panel match-panel"><div class="panel-heading"><div><p class="section-kicker">AI DOCUMENT MATCH</p><h2>输入客户需求清单</h2></div><span class="security-note"><i data-lucide="lock"></i>人工复核后发送</span></div><label class="field-label">客户 / 项目<select id="complianceCustomer"><option>Medline Gulf · UAE</option><option>K-Health · South Korea</option><option>HealthPlus · Saudi Arabia</option></select></label><label class="field-label">需求清单<textarea id="complianceRequest">Please provide CE certificate, ISO 13485 certificate, product technical file, Declaration of Conformity, and UAE registration support documents.</textarea></label><div class="match-options"><label><input type="checkbox" checked /> 只匹配有效文件</label><label><input type="checkbox" checked /> 检查国家适用性</label></div><button class="button primary full-width" id="runMatch"><i data-lucide="scan-search"></i>开始智能比对</button></section>
+              <section class="panel result-panel"><div class="panel-heading"><div><p class="section-kicker">MATCH RESULT</p><h2>资料匹配结果</h2></div><span class="result-time" id="resultTime">刚刚更新</span></div><div class="match-summary"><div class="summary-score"><strong id="matchScore">78%</strong><span>可立即提供</span></div><div class="summary-copy"><strong>共识别 5 项资料需求</strong><span>4 项已匹配，1 项需要人工准备</span></div></div><div class="document-list" id="documentList"><div class="document-row ready"><div class="document-icon"><i data-lucide="file-check-2"></i></div><div class="document-copy"><strong>CE Certificate</strong><span>适用于 UAE · 有效至 2027-08-14</span></div><span class="status-chip ready">立即可用</span><button class="icon-button quiet" title="查看文件" aria-label="查看文件"><i data-lucide="external-link"></i></button></div><div class="document-row ready"><div class="document-icon"><i data-lucide="file-check-2"></i></div><div class="document-copy"><strong>ISO 13485 Certificate</strong><span>适用于全球 · 有效至 2027-03-22</span></div><span class="status-chip ready">立即可用</span><button class="icon-button quiet" title="查看文件" aria-label="查看文件"><i data-lucide="external-link"></i></button></div><div class="document-row ready"><div class="document-icon"><i data-lucide="file-check-2"></i></div><div class="document-copy"><strong>Declaration of Conformity</strong><span>产品型号：IV-150 · 已归档</span></div><span class="status-chip ready">立即可用</span><button class="icon-button quiet" title="查看文件" aria-label="查看文件"><i data-lucide="external-link"></i></button></div><div class="document-row review"><div class="document-icon"><i data-lucide="file-clock"></i></div><div class="document-copy"><strong>UAE Registration Support</strong><span>需要合规同事补充当地代理信息</span></div><span class="status-chip review">需人工准备</span><button class="icon-button quiet" title="创建任务" aria-label="创建任务"><i data-lucide="arrow-up-right"></i></button></div></div><div class="review-warning"><i data-lucide="triangle-alert"></i><span>AI 结果仅用于内部预审，所有文件必须由合规负责人复核后发送。</span></div></section>
+            </div>
+            <section class="panel document-library"><div class="panel-heading"><div><p class="section-kicker">DOCUMENT LIBRARY</p><h2>资料状态概览</h2></div><div class="library-stats"><span><b class="dot teal"></b>可用 42</span><span><b class="dot amber"></b>即将到期 7</span><span><b class="dot coral"></b>待准备 3</span></div></div><div class="mini-table"><div class="mini-row head"><span>文件名称</span><span>适用国家</span><span>状态</span><span>更新时间</span></div><div class="mini-row"><strong>ISO 13485:2016</strong><span>全球</span><span class="status-chip ready">有效</span><span>2026-10-20</span></div><div class="mini-row"><strong>CE Certificate · IV-150</strong><span>欧盟 / GCC</span><span class="status-chip ready">有效</span><span>2026-10-18</span></div><div class="mini-row"><strong>FDA 510(k) · PO-02</strong><span>美国</span><span class="status-chip review">即将到期</span><span>2026-11-12</span></div></div></section>
+          </section>
+
+          <section class="view" id="view-supply">
+            <div class="page-heading compact">
+              <div><p class="eyebrow">SUPPLY COLLABORATION</p><h1>采购与库存</h1><p class="subheading">用客户预测、合同规则和库存状态，提前看见下季度的供货压力。</p></div>
+              <div class="heading-actions"><button class="button secondary" data-action="export"><i data-lucide="download"></i>导出备货建议</button><button class="button primary"><i data-lucide="calendar-plus"></i>创建排产计划</button></div>
+            </div>
+            <div class="supply-kpi-grid"><div class="supply-kpi"><span>下季度预测需求</span><strong>38,400 <small>件</small></strong><em class="positive-text">较本季度 +16.8%</em></div><div class="supply-kpi"><span>当前可用库存</span><strong>31,920 <small>件</small></strong><em>覆盖 2.5 个月</em></div><div class="supply-kpi"><span>在途库存</span><strong>4,800 <small>件</small></strong><em>预计 11 月 8 日到货</em></div><div class="supply-kpi danger-kpi"><span>待补货缺口</span><strong>1,680 <small>件</small></strong><em>2 个 SKU 需要关注</em></div></div>
+            <div class="supply-layout"><section class="panel forecast-panel"><div class="panel-heading"><div><p class="section-kicker">DEMAND FORECAST</p><h2>下季度需求趋势</h2></div><div class="select-like">2026 Q4 <i data-lucide="chevron-down"></i></div></div><div class="forecast-chart"><div class="forecast-y"><span>12k</span><span>8k</span><span>4k</span><span>0</span></div><div class="forecast-bars"><div><span style="height:48%"></span><small>10月</small></div><div><span style="height:59%"></span><small>11月</small></div><div><span style="height:70%"></span><small>12月</small></div><div class="forecast-divider"></div><div><span class="future" style="height:74%"></span><small>1月</small></div><div><span class="future" style="height:82%"></span><small>2月</small></div><div><span class="future" style="height:91%"></span><small>3月</small></div></div></div><div class="forecast-legend"><span><b class="legend-dot actual"></b>历史实际</span><span><b class="legend-dot future-dot"></b>预测需求</span><span><b class="legend-dot safety"></b>安全库存线</span></div></section><section class="panel formula-panel"><div class="panel-heading"><div><p class="section-kicker">PLANNING LOGIC</p><h2>缺口计算</h2></div><i data-lucide="calculator"></i></div><div class="formula">缺口量 = <b>预测需求</b> + <b>安全库存</b> − <b>可用库存</b> − <b>在途库存</b></div><div class="formula-example"><div><span>预测需求</span><strong>38,400</strong></div><div><span>安全库存</span><strong>4,800</strong></div><div><span>可用 + 在途</span><strong class="positive-text">36,720</strong></div><div class="formula-result"><span>计划补货</span><strong>6,480 <small>件</small></strong></div></div><button class="text-button">查看计算明细 <i data-lucide="arrow-up-right"></i></button></section></div>
+            <section class="panel inventory-panel"><div class="panel-heading"><div><p class="section-kicker">INVENTORY WATCHLIST</p><h2>库存预警与备货建议</h2></div><div class="table-actions"><span class="panel-badge danger-badge">2 项预警</span><button class="text-button">导出 <i data-lucide="download"></i></button></div></div><div class="table-scroll"><table><thead><tr><th>产品 / SKU</th><th>预测需求</th><th>可用库存</th><th>在途库存</th><th>缺口量</th><th>建议动作</th><th></th></tr></thead><tbody><tr><td><strong>一次性无菌输液器</strong><span class="table-sub">IV-150 · 20 drops/ml</span></td><td>12,800</td><td>8,600</td><td>3,000</td><td><span class="quantity-danger">1,200</span></td><td><span class="status-chip review">本周排产</span></td><td><button class="icon-button quiet" title="查看详情" aria-label="查看详情"><i data-lucide="chevron-right"></i></button></td></tr><tr><td><strong>一次性呼吸回路</strong><span class="table-sub">BC-200 · Adult</span></td><td>8,400</td><td>6,300</td><td>1,200</td><td><span class="quantity-danger">900</span></td><td><span class="status-chip review">确认交期</span></td><td><button class="icon-button quiet" title="查看详情" aria-label="查看详情"><i data-lucide="chevron-right"></i></button></td></tr><tr><td><strong>医用检查手套</strong><span class="table-sub">GL-100 · Nitrile M</span></td><td>17,200</td><td>17,020</td><td>600</td><td><span class="quantity-ok">0</span></td><td><span class="status-chip ready">库存健康</span></td><td><button class="icon-button quiet" title="查看详情" aria-label="查看详情"><i data-lucide="chevron-right"></i></button></td></tr></tbody></table></div></section>
+          </section>
+
+          <section class="view" id="view-settings">
+            <div class="page-heading compact"><div><p class="eyebrow">WORKSPACE SETTINGS</p><h1>工作台设置</h1><p class="subheading">配置团队成员、提醒节奏和业务规则。</p></div></div>
+            <section class="panel settings-panel"><div class="settings-row"><div><strong>回访提醒节奏</strong><span>基于首次询盘自动创建 +1 天、+3 天、+1 周、+2 周任务。</span></div><div class="setting-value">已启用 <i data-lucide="check-circle-2"></i></div></div><div class="settings-row"><div><strong>合同规则防呆提示</strong><span>在报价、发货和复购节点展示客户合同里的关键约束。</span></div><div class="setting-value">已启用 <i data-lucide="check-circle-2"></i></div></div><div class="settings-row"><div><strong>库存预警阈值</strong><span>缺口量大于 0 时标红；预测置信度低于 70% 时标记人工复核。</span></div><button class="button secondary compact-button">编辑规则</button></div></section>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <div class="modal-backdrop" id="customerModal" hidden>
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-heading"><div><p class="section-kicker">CUSTOMER ASSET</p><h2 id="modalTitle">新增客户</h2></div><button class="icon-button quiet" data-close-modal title="关闭" aria-label="关闭"><i data-lucide="x"></i></button></div>
+        <form id="customerForm">
+          <label class="field-label">客户名称<input name="name" required placeholder="例如：Medline Gulf" /></label>
+          <div class="field-row"><label class="field-label">国家 / 地区<input name="country" required placeholder="例如：阿联酋" /></label><label class="field-label">客户分级<select name="level"><option>A 级</option><option selected>B 级</option><option>C 级</option></select></label></div>
+          <label class="field-label">联系邮箱<input type="email" name="email" required placeholder="buyer@company.com" /></label>
+          <div class="modal-actions"><button type="button" class="button secondary" data-close-modal>取消</button><button type="submit" class="button primary"><i data-lucide="plus"></i>创建客户</button></div>
+        </form>
+      </div>
+    </div>
+    <div class="toast" id="toast" role="status"><i data-lucide="check-circle-2"></i><span></span></div>
+    <script src="./app.js?v=notify-20261031"></script>
+    <script src="./product-import.js?v=1"></script>
+    <script src="./inquiry.js"></script>
+    <script src="./registry.js"></script>
+    <script src="./i18n.js"></script>
+    <script type="module" src="./widget/hafiller-widget.js?v=calm-1"></script>
+  </body>
+</html>

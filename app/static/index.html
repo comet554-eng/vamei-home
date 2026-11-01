@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HAFILLER 询盘助手</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>HAFILLER 询盘助手 <small>工作流 A · 询盘理解与回复</small></h1>
+  <span id="status" class="badge">…</span>
+</header>
+<main>
+  <section class="col">
+    <h2>1 询盘</h2>
+    <div class="row">
+      <select id="sample"></select>
+      <button id="load" class="ghost">载入示例</button>
+    </div>
+    <div class="row">
+      <label>渠道 <select id="channel"><option value="alibaba">阿里国际站</option><option value="email">邮件</option></select></label>
+      <label>回复语言 <select id="lang"><option value="auto">自动</option><option value="en">English</option><option value="es">Español</option></select></label>
+    </div>
+    <textarea id="inquiry" rows="9" placeholder="粘贴买家询盘，任何语言"></textarea>
+    <button id="run" class="primary">理解并生成回复</button>
+    <h3>理解结果</h3>
+    <div id="understanding" class="muted">还没有运行</div>
+    <h3>知识库调用</h3>
+    <div id="kbrefs" class="muted">还没有运行</div>
+  </section>
+
+  <section class="col wide">
+    <h2>2 回复</h2>
+    <div id="rounds" class="tabs"></div>
+    <div id="replyView" class="reply muted">还没有回复</div>
+    <textarea id="replyEdit" class="reply hidden" rows="16"></textarea>
+    <details id="zhBox"><summary>中文对照</summary><pre id="replyZh"></pre></details>
+    <details id="diffBox"><summary>和上一轮对比</summary><div id="diff" class="diff"></div></details>
+    <h3>迭代</h3>
+    <textarea id="instruction" rows="2" placeholder="用中文写修改要求，例如：语气正式点；只推面部用途；独家代理转经理"></textarea>
+    <div id="mockHint" class="hint hidden">未配置模型：修改指令不会生效。请点「编辑回复」手改，再点「重新校验」。</div>
+    <div class="row wrap">
+      <button id="revise" class="primary" disabled>按指令修改</button>
+      <button id="fix" disabled>按校验意见修改</button>
+      <button id="edit" class="ghost" disabled>编辑回复</button>
+      <button id="recheck" class="ghost hidden">重新校验</button>
+      <button id="risky" class="ghost danger hidden">插入风险话术（演示）</button>
+    </div>
+  </section>
+
+  <section class="col">
+    <h2>3 校验与反馈</h2>
+    <div id="level" class="level">—</div>
+    <div id="findings"></div>
+    <h3>数据流</h3>
+    <ol id="trace" class="trace"></ol>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

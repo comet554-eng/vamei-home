@@ -1,0 +1,223 @@
+{
+  "meta": {
+    "title": "HAFILLER 产品知识库（由三份 PDF 整理）",
+    "built": "2026-10-31",
+    "confidential": "朋友公司内部资料，未获授权前不得公开展示或上传",
+    "sources": {
+      "S1": {"file": "Hafiller Catalog.pdf", "pages": 13, "lang": "en", "note": "填充剂画册，另含关节与眼科各 1 页"},
+      "S2": {"file": "catalog OVD(1).pdf", "pages": 4, "lang": "en", "note": "眼科粘弹剂画册"},
+      "S3": {"file": "外销交联产品参数20240321(1).pdf", "pages": 1, "lang": "en", "note": "填充剂参数表，文件名日期 2024-03-21"}
+    },
+    "s1_pages": {
+      "p1": "封面/封底", "p2": "公司时间线与分销地图", "p3": "技术与临床数据", "p4": "填充剂产品总览",
+      "p5": "适用部位图", "p6": "Fine Lines", "p7": "Derm", "p8": "Derm Deep", "p9": "Derm Plus",
+      "p10": "Sub Skin", "p11": "前后对比", "p12": "关节注射", "p13": "眼科"
+    },
+    "field_format": "{v: 值, src: [来源页], st: 状态, d: 矛盾编号(见 conflicts.md)}",
+    "status": {
+      "ok": "两处以上来源一致",
+      "single": "只有一处来源",
+      "conflict": "来源之间矛盾，值取第一个来源，其余写在 alt",
+      "suspect": "只有一处来源，但数值或用词可疑",
+      "image": "从图片读出，分辨率有限"
+    },
+    "rule_ids": "C1–C6 / P1–P2 / K1–K3 见校验规则表；D01 起为资料矛盾编号"
+  },
+
+  "company": {
+    "name": {"v": "Zhejiang Jingjia Medical Technology Co., Ltd.", "src": ["S1-p1", "S2-p4"], "st": "ok"},
+    "brands": {
+      "HAFILLER": "填充剂与眼科粘弹剂",
+      "Hairont": "关节注射（S1-p12 包装）"
+    },
+    "founded": {"v": 1995, "src": ["S1-p2"], "st": "single"},
+    "profile": {"v": "国内最早生产医用透明质酸钠凝胶的企业之一；三类医疗器械生产企业", "src": ["S1-p2"], "st": "single"},
+    "timeline": {
+      "v": [
+        {"year": 2006, "event": "引入欧盟医疗器械 GMP"},
+        {"year": 2008, "event": "获得欧盟 CE 证书（S2-p4 写明是 OVD 产品）"},
+        {"year": 2012, "event": "在英国设立海外研发基地"},
+        {"year": 2018, "event": "通过 BSI 的 MDSAP 质量体系认证"},
+        {"year": 2022, "event": "在中国 NMPA 注册（未写明是哪个产品）"}
+      ],
+      "src": ["S1-p2", "S2-p4"], "st": "single"
+    },
+    "patents": {"v": {"SAX-HA": "ZL 2012 1 0372786.0", "PCT": "PCT/CN2013/080217", "invention_patents": "19+，含一项美国发明专利"}, "src": ["S1-p3", "S2-p4"], "st": "single"},
+    "self_reported": {
+      "v": {"export_countries": "40+", "rd_team": "60+", "investment": "700 million+（未写币种）", "ranking": "全球前十（无出处）", "standard": "医美行业标准起草单位之一（未写哪项标准）"},
+      "src": ["S2-p4"], "st": "single"
+    },
+    "distribution_map": {
+      "v": ["Russia", "Kazakhstan", "Korea", "Thailand", "Malaysia", "Iraq", "Iran", "Saudi Arabia", "UAE",
+            "Britain", "Germany", "Poland", "Czech", "Slovakia", "Ukraine", "Italy", "Spain", "Morocco",
+            "South Africa", "Colombia", "Venezuela", "Ecuador", "Brazil", "Bolivia", "Chile"],
+      "src": ["S1-p2"], "st": "image", "d": "D15",
+      "note": "25 个海外国家，标题是 Distribution networks，只表示有分销，不等于已注册"
+    },
+    "contacts": {
+      "st": "conflict", "d": "D14",
+      "v": [
+        {"src": "S1-p1", "address": "206#, Zhenzhong Road, Xihu District 310030, Hangzhou, China", "tel": "86-571-89987901", "fax": "86-571-88883312", "email": "biz@hafiller.com", "web": "http://www.hafiller.com"},
+        {"src": "S2-p4", "address": "No. 1288-86, Jingwu Road, Linjiang Street, Qiantang District, Hangzhou, Zhejiang, China", "tel": "+86-571-8998 7921", "email": "Lambert@hafiller.com", "web": "www.hafliier.com（拼写错误）"}
+      ]
+    }
+  },
+
+  "filler_common": {
+    "applies_to": ["HF-FL", "HF-DERM", "HF-DD", "HF-DP", "HF-SS"],
+    "generic_name": {"v": "Medical Cross-linked Sodium Hyaluronate Gel", "src": ["S1-p3", "S1-p6"], "st": "ok"},
+    "category": {"v": "软组织填充剂 / 真皮填充剂", "src": ["S1-p3"], "st": "single"},
+    "technology": {"v": "SAX-HA 交联技术：疏水缔合使凝胶在体内聚集、减少移位", "src": ["S1-p3"], "st": "single"},
+    "concentration": {"v": "20mg/ml", "src": ["S1-p4", "S1-p6", "S1-p7", "S1-p8", "S1-p9", "S1-p10", "S3"], "st": "ok"},
+    "state": {"v": "Bi-phasic（双相）", "src": ["S3"], "st": "single"},
+    "g2_modulus": {"v": "60~80Pa", "label_in_source": "G\" (Cohesivity)", "src": ["S3"], "st": "suspect", "d": "D07"},
+    "crosslink_rate": {"v": "≈10%", "src": ["S3"], "st": "single", "d": "D08"},
+    "molecular_weight": {"v": "1500kDa", "src": ["S3"], "st": "single", "d": "D08"},
+    "injection_resistance": {"v": "10~30N", "src": ["S3"], "st": "single"},
+    "bdde": {"v": "0.2~0.5pg/g", "src": ["S3"], "st": "suspect", "d": "D06"},
+    "endotoxin": {"v": "<0.25EU/ml", "src": ["S3"], "st": "single"},
+    "ce_mark_on_box": {"v": "CE 2460", "src": ["S1-p7"], "st": "image", "note": "包装图上的数字，分辨率有限"},
+    "selling_points": {"v": ["No animal origin", "No skin test needed", "Fully biodegradable and without any rejection", "Effect is natural"], "src": ["S1-p3"], "st": "single", "claims": ["CL01", "CL02"]}
+  },
+
+  "products": [
+    {
+      "id": "HF-FL", "name": "HAFILLER Fine Lines", "type": "filler",
+      "indication": {"v": "眼周和口周细纹，如鱼尾纹、口周纹", "src": ["S1-p4", "S1-p6", "S3"], "st": "ok"},
+      "areas": {"v": ["temple", "crow's feet", "perioral", "labial commissure", "facial oval", "marionette lines"], "src": ["S1-p5", "S1-p11"], "st": "ok", "d": "D19"},
+      "injection_depth": {"v": "真皮浅层", "src": ["S1-p4", "S3"], "st": "image"},
+      "particle_size": {"v": "0.10-0.15mm", "src": ["S1-p4", "S3"], "st": "ok"},
+      "volumes": {"v": ["1.0ml", "2.0ml"], "src": ["S1-p6", "S3"], "st": "ok"},
+      "needle": {"v": "30G", "src": ["S1-p4", "S1-p6", "S3"], "st": "ok"},
+      "duration": {"v": "6-9 months", "src": ["S1-p4", "S1-p6", "S3"], "st": "ok"},
+      "g1_stiffness": {"v": "290~320Pa", "src": ["S3"], "st": "suspect", "d": "D08"}
+    },
+    {
+      "id": "HF-DERM", "name": "HAFILLER Derm", "type": "filler",
+      "indication": {"v": "中度皱纹和皮肤褶皱，如皱眉纹；唇部填充", "src": ["S1-p4", "S3"], "st": "ok", "alt": [{"src": "S1-p7", "v": "中度皱纹、皮肤褶皱和唇红缘"}], "d": "D18"},
+      "areas": {"v": ["forehead", "glabella", "neck"], "src": ["S1-p5", "S1-p11"], "st": "ok", "d": "D18"},
+      "injection_depth": {"v": "真皮中层", "src": ["S1-p4", "S3"], "st": "image"},
+      "particle_size": {"v": "0.15-0.28mm", "src": ["S1-p4", "S3"], "st": "ok"},
+      "volumes": {"v": ["1.0ml", "2.0ml"], "src": ["S1-p7", "S3"], "st": "ok"},
+      "needle": {"v": "30G", "src": ["S1-p4", "S1-p7", "S3"], "st": "ok"},
+      "duration": {"v": "6-12 months", "src": ["S1-p4", "S1-p7", "S3"], "st": "ok"},
+      "g1_stiffness": {"v": "290~320Pa", "src": ["S3"], "st": "suspect", "d": "D08"}
+    },
+    {
+      "id": "HF-DD", "name": "HAFILLER Derm Deep", "type": "filler",
+      "indication": {"v": "深皱纹和褶皱，如鼻唇沟；唇部填充；面部填充", "src": ["S1-p4", "S3"], "st": "ok", "alt": [{"src": "S1-p8", "v": "中深度皱纹填充，唇部和面颊扩容"}]},
+      "areas": {"v": ["cheekbones", "nose", "cheek", "nasolabial folds", "lips", "neck"], "src": ["S1-p5", "S1-p11"], "st": "ok"},
+      "injection_depth": {"v": "真皮深层", "src": ["S1-p4", "S3"], "st": "image"},
+      "particle_size": {"v": "0.28-0.50mm", "src": ["S1-p4", "S3"], "st": "ok"},
+      "volumes": {"v": ["0.5ml", "1.0ml", "2.0ml"], "src": ["S1-p8"], "st": "conflict", "alt": [{"src": "S3", "v": ["1.0ml", "2.0ml"]}], "d": "D01"},
+      "needle": {"v": "27G or 26G", "src": ["S1-p4", "S1-p8", "S3"], "st": "ok"},
+      "duration": {"v": "6-12 months", "src": ["S1-p4", "S1-p8", "S3"], "st": "ok"},
+      "g1_stiffness": {"v": "320~370Pa", "src": ["S3"], "st": "single"}
+    },
+    {
+      "id": "HF-DP", "name": "HAFILLER Derm Plus", "type": "filler",
+      "indication": {"v": "隆胸、隆臀", "src": ["S1-p4", "S3"], "st": "conflict", "alt": [{"src": "S1-p9", "v": "填充深皱纹，恢复和塑造面颊、颧骨、下巴的容量"}], "d": "D03", "claims": ["CL09"]},
+      "areas": {"v": ["nasolabial folds", "chin", "breast", "buttock"], "src": ["S1-p5", "S1-p11"], "st": "conflict", "d": "D03"},
+      "injection_depth": {"v": "真皮深层与皮下交界", "src": ["S1-p4", "S3"], "st": "image"},
+      "particle_size": {"v": "0.50-1.25mm", "src": ["S1-p4", "S3"], "st": "ok"},
+      "volumes": {"v": ["1.5ml", "10ml", "20ml"], "src": ["S1-p9", "S3"], "st": "ok"},
+      "needle": {"v": "23G or 25G", "src": ["S1-p4", "S1-p9", "S3"], "st": "ok"},
+      "duration": {"v": "9-18 months", "src": ["S1-p4", "S1-p9", "S3"], "st": "ok"},
+      "g1_stiffness": {"v": "370~430Pa", "src": ["S3"], "st": "suspect", "d": "D08"}
+    },
+    {
+      "id": "HF-SS", "name": "HAFILLER Sub Skin", "type": "filler",
+      "indication": {"v": "面部轮廓矫正，包括面颊、下巴、鼻", "src": ["S1-p4"], "st": "conflict", "alt": [{"src": "S1-p10", "v": "塑形扩容，矫正面部轮廓，扩充面颊、下巴，改变鼻部轮廓，补偿皮肤老化带来的容量流失"}, {"src": "S3", "v": "面部和身体轮廓，包括隆胸、隆臀、面颊、隆鼻"}], "d": "D02", "claims": ["CL09"]},
+      "areas": {"v": ["cheekbones", "nose", "cheek", "chin", "breast", "buttock"], "src": ["S1-p5", "S1-p11"], "st": "conflict", "d": "D02"},
+      "injection_depth": {"v": "真皮深层与皮下交界", "src": ["S1-p4", "S3"], "st": "image"},
+      "particle_size": {"v": "1.25-2.0mm", "src": ["S1-p4", "S3"], "st": "ok"},
+      "volumes": {"v": ["2.0ml", "10ml", "20ml"], "src": ["S1-p10", "S3"], "st": "ok"},
+      "needle": {"v": "23G or 25G", "src": ["S1-p4", "S1-p10", "S3"], "st": "ok"},
+      "duration": {"v": "9-18 months", "src": ["S1-p4", "S1-p10", "S3"], "st": "ok"},
+      "g1_stiffness": {"v": "370~430Pa", "src": ["S3"], "st": "suspect", "d": "D08"}
+    },
+    {
+      "id": "HAIRONT-KNEE", "name": "Hairont Medical Sodium Hyaluronate Gel", "type": "orthopedic",
+      "box_text": {"v": "Viscoelastic Solution for Osteoarthritis", "src": ["S1-p12"], "st": "image"},
+      "indication": {"v": "骨关节炎（膝关节注射）", "src": ["S1-p12 标题与包装"], "st": "conflict", "alt": [{"src": "S1-p12 正文", "v": "辅助预防或减少腹腔（盆腔）手术后粘连"}], "d": "D04"},
+      "concentration": {"v": "10mg/ml", "src": ["S1-p12 正文与包装"], "st": "single"},
+      "volumes": {"v": ["1ml", "1.5ml", "2ml", "2.5ml", "3ml", "4ml", "5ml"], "src": ["S1-p12"], "st": "single"},
+      "shelf_life": {"v": "2 years", "src": ["S1-p12"], "st": "single"},
+      "storage": {"v": "避光，常温保存", "src": ["S1-p12"], "st": "single"},
+      "ce_mark_on_box": {"v": "有 CE 标志，编号看不清", "src": ["S1-p12"], "st": "image"}
+    },
+    {
+      "id": "HF-OVD", "name": "HAFILLER Medical Sodium Hyaluronate Gel – Ophthalmic Viscoelastic Device", "type": "ophthalmic",
+      "box_model": {"v": "AQUA20，盒面印 20mg/ml", "src": ["S1-p13"], "st": "image"},
+      "main_component": {"v": "Sodium hyaluronate", "src": ["S2-p2"], "st": "single"},
+      "intended_use": {"v": ["维持前房", "保护眼内组织", "辅助散瞳", "防止玻璃体脱出", "止血", "预防术后粘连"], "src": ["S1-p13", "S2-p2"], "st": "ok", "d": "D20"},
+      "procedures": {"v": ["白内障摘除及人工晶体植入", "开角型青光眼深层巩膜切除术"], "src": ["S2-p3"], "st": "single"},
+      "concentration": {"v": "14 / 15 / 18 / 20 / 25 / 30mg（原文无 /ml）", "src": ["S1-p13"], "st": "conflict", "alt": [{"src": "S2-p2", "v": "13mg/ml ~ 30mg/ml"}], "d": "D05"},
+      "volumes": {"v": ["1.5ml"], "src": ["S1-p13 文字"], "st": "conflict", "alt": [{"src": "S1-p13 包装图", "v": ["1.5ml", "2.0ml"]}, {"src": "S2-p2", "v": "0.5ml ~ 2ml"}], "d": "D05"},
+      "shelf_life": {"v": "2 years", "src": ["S1-p13"], "st": "single"},
+      "ce": {"v": "2008 年获得 CE 证书；盒面印 CE 2460", "src": ["S2-p4", "S1-p13"], "st": "image"},
+      "selling_points": {"v": ["Moistening and lubrication", "Wound healing", "Biocompatibility"], "src": ["S1-p13"], "st": "single", "d": "D21"}
+    }
+  ],
+
+  "evidence": [
+    {
+      "id": "EV01", "title": "HAFILLER 全球临床病例分布", "src": "S1-p3", "unit": "cases", "total": 608, "d": "D11",
+      "data": {"Nasolabial folds": 210, "Forehead lines": 88, "Laugh lines": 56, "Glabellar lines": 48, "Lips": 42, "Others": 36, "Cheek": 36, "Mouth corners": 34, "Eyelid malpositions": 32, "Forehead wrinkle": 26},
+      "note": "没有研究名称、时间、地点"
+    },
+    {
+      "id": "EV02", "title": "效果维持率对比", "src": "S1-p3", "unit": "%", "d": "D09",
+      "data": {"HAFILLER": {"1w": 100, "4w": 100, "12w": 96.67, "24w": 93.30, "54w": 86.67}, "PRODUCT X": "仅有曲线，无数字，54 周约 81%"},
+      "note": "对比对象未具名"
+    },
+    {
+      "id": "EV03", "title": "注射后 2 周反应持续时间（HAFILLER）", "src": "S1-p3", "n": 214, "d": "D13",
+      "columns": ["total", "1 day", "2-7 days", ">7 days", ">14 days"],
+      "data": {"Pain": [211, 139, 72, 0, 0], "Swelling": [211, 25, 186, 0, 0], "Allergy": [0, 0, 0, 0, 0], "Congestion": [11, 6, 5, 0, 0], "Induration": [102, 9, 93, 0, 0]},
+      "note": "n 由百分比反推；原文未写样本量"
+    },
+    {
+      "id": "EV04", "title": "注射后 2 周反应持续时间（other market brand）", "src": "S1-p3", "n": 138, "d": "D12",
+      "columns": ["total", "1 day", "2-7 days", ">7 days", ">14 days"],
+      "data": {"Congestion": [72, 7, 56, 6, 3], "Rubedo": [117, 19, 68, 18, 12], "Swelling": [120, 16, 84, 16, 4], "Pain": [79, 29, 48, 2, 0], "Tenderness": [107, 21, 78, 6, 2], "Pruritus": [42, 11, 25, 6, 0], "Other": [34, 7, 23, 3, 1]},
+      "note": "n 由百分比反推；对比品牌未具名"
+    },
+    {
+      "id": "EV05", "title": "推注力曲线与体外酶解曲线", "src": "S1-p3", "d": "D10",
+      "data": {"extrusion_force": "两条曲线都在约 20N，HAFILLER 波动更小", "enzymolysis": "HAFILLER 约 18%→55%，other market brand 约 28%→70%（读图）"},
+      "note": "对比对象写作 swedish brand"
+    },
+    {
+      "id": "EV06", "title": "OVD 关键指标", "src": "S2-p2",
+      "data": {"24h 眼压恢复": "86%", "蛋白残留降低": "98.2%", "粘弹性等指标提升": "57.5%"},
+      "note": "没有说明是和谁比、在什么条件下测的", "d": "D16"
+    },
+    {
+      "id": "EV07", "title": "OVD 临床数据", "src": "S2-p3", "d": "D17",
+      "data": {
+        "cataract_cohort": "1102 patients（右眼 567，左眼 535），5-85 岁",
+        "glaucoma_iop_mmHg": {"treatment": {"pre": 18.2, "1d": 9.3, "1w": 7.2, "3m": 14.3}, "control": {"pre": 17.7, "1d": 6.6, "1w": 6.7, "3m": 13.8}},
+        "endothelial_loss_pct": {"treatment": {"1w": 4, "3w": 3.3}, "control": {"1w": 17.5, "3w": 11.6}},
+        "complications_pct": {"Preatrial hemorrhage": {"treatment": 5.4, "control": 16.2}, "Choroid detachment": {"treatment": 2.7, "control": 10.5}}
+      }
+    }
+  ],
+
+  "claims": [
+    {"id": "CL01", "text": "No skin test needed", "src": "S1-p3", "rules": ["C5"]},
+    {"id": "CL02", "text": "Fully biodegradable and without any rejection", "src": "S1-p3", "rules": ["C5"]},
+    {"id": "CL03", "text": "HAFILLER's extrusion force curve is more smooth than swedish brand", "src": "S1-p3", "rules": ["P2", "C6"], "evidence": "EV05"},
+    {"id": "CL04", "text": "HAFILLER's enzymolysis in vitro time is less than swedish brand ... has longer lasting results", "src": "S1-p3", "rules": ["P2", "C6"], "evidence": "EV05", "d": "D10"},
+    {"id": "CL05", "text": "Aquaderm cross linked dermal filler have been recognized by global customers", "src": "S1-p3", "rules": ["P1"], "d": "D09"},
+    {"id": "CL06", "text": "效果维持率 54 周 86.67%，高于 PRODUCT X", "src": "S1-p3", "rules": ["C6", "P2"], "evidence": "EV02"},
+    {"id": "CL07", "text": "Global Clinical Trial Data Statistics（608 例）", "src": "S1-p3", "rules": ["C6"], "evidence": "EV01"},
+    {"id": "CL08", "text": "注射反应对比表（HAFILLER vs other market brand）", "src": "S1-p3", "rules": ["C6", "P2"], "evidence": "EV03/EV04", "d": "D13"},
+    {"id": "CL09", "text": "Breast and buttock augmentation（Derm Plus / Sub Skin，含前后对比图）", "src": "S1-p4, S1-p5, S1-p11, S3", "rules": ["C1"]},
+    {"id": "CL10", "text": "前后对比照片，未注明病例来源和是否修图", "src": "S1-p11", "rules": ["C6"]},
+    {"id": "CL11", "text": "ranking among the top 10 globally", "src": "S2-p4", "rules": ["P1", "C6"]},
+    {"id": "CL12", "text": "One Of The Drafters Of The Industry Standard For Cosmetic Medicine", "src": "S2-p4", "rules": ["C6"]},
+    {"id": "CL13", "text": "86% / 98.2% / 57.5%（OVD 指标）", "src": "S2-p2", "rules": ["C6"], "evidence": "EV06"},
+    {"id": "CL14", "text": "OVD 白内障与青光眼临床数据", "src": "S2-p3", "rules": ["C6"], "evidence": "EV07", "d": "D17"}
+  ]
+}

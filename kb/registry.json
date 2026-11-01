@@ -1,0 +1,1417 @@
+{
+  "meta": {
+    "source_file": "医疗器械四国注册清单_工作初稿.xlsx",
+    "title": {
+      "zh": "四国医疗器械注册清单",
+      "en": "Medical Device Registration Checklist: Four Markets"
+    },
+    "assumption": {
+      "zh": "适用假设：境外制造商的一般医疗器械，非 IVD。中国 III类需在各市场重新分类。",
+      "en": "Assumption: general medical devices from a foreign manufacturer, not IVDs. A China Class III device must be reclassified in each market."
+    },
+    "disclaimer": {
+      "zh": "工作初稿，非产品最终申报清单。生成日期：2026-11-01（本机日期）。官网访问未取得可留存正文，现行要求须复核。",
+      "en": "Working draft, not the final submission checklist for any product. Generated 2026-11-01 (local machine date). The official websites could not be accessed to retain reviewable text; current requirements must be re-verified."
+    },
+    "pending": {
+      "zh": "待补充：产品名称/型号、预期用途、植入/无菌/IVD属性、制造商所在地、现有 CE/ISO 13485/NMPA证书及拟上市日期。",
+      "en": "To be completed: product name/model, intended use, implantable/sterile/IVD status, manufacturer location, existing CE/ISO 13485/NMPA certificates and planned launch date."
+    },
+    "no_fees": {
+      "zh": "不预填固定费用/周期。最终分类、临床、当地代表、语言和专项认证须根据具体产品及申报时现行法规确认。",
+      "en": "No fixed fees or timelines are pre-filled. Final classification, clinical requirements, local representative, language and special certifications must be confirmed for the specific product under the regulations in force at the time of submission."
+    },
+    "tasks_title": {
+      "zh": "材料与执行任务",
+      "en": "Documents and Tasks"
+    },
+    "progress_note": {
+      "zh": "适用性与进度分开维护。未完成产品分类和材料差距评估前，不应将任务状态视为申报就绪。",
+      "en": "Applicability and progress are tracked separately. Until product classification and the documentation gap assessment are complete, task status must not be read as submission-ready."
+    },
+    "sources_title": {
+      "zh": "官方核查入口",
+      "en": "Official Verification Sources"
+    },
+    "sources_note": {
+      "zh": "以下为官方入口和法规标识，不是已留存的逐项最新条文证据。本次访问未能取得可复核正文，执行前须复核。",
+      "en": "These are official portals and regulation identifiers, not retained evidence of the latest text of each requirement. Reviewable text could not be obtained during this visit; re-verify before acting."
+    }
+  },
+  "codes": {
+    "market": {
+      "ALL": {
+        "zh": "共用",
+        "en": "Shared"
+      },
+      "SA": {
+        "zh": "沙特",
+        "en": "Saudi Arabia"
+      },
+      "BR": {
+        "zh": "巴西",
+        "en": "Brazil"
+      },
+      "DE": {
+        "zh": "德国",
+        "en": "Germany"
+      },
+      "TR": {
+        "zh": "土耳其",
+        "en": "Türkiye"
+      }
+    },
+    "applicability": {
+      "tbd": {
+        "zh": "待确认",
+        "en": "To be confirmed"
+      },
+      "yes": {
+        "zh": "适用",
+        "en": "Applicable"
+      },
+      "no": {
+        "zh": "不适用",
+        "en": "Not applicable"
+      }
+    },
+    "status": {
+      "todo": {
+        "zh": "未开始",
+        "en": "Not started"
+      },
+      "doing": {
+        "zh": "进行中",
+        "en": "In progress"
+      },
+      "done": {
+        "zh": "已完成",
+        "en": "Done"
+      },
+      "blocked": {
+        "zh": "受阻",
+        "en": "Blocked"
+      }
+    }
+  },
+  "dimensions": [
+    {
+      "key": "classification",
+      "zh": "当地分类",
+      "en": "Local classification"
+    },
+    {
+      "key": "pathway",
+      "zh": "主要准入路径",
+      "en": "Main market access pathway"
+    },
+    {
+      "key": "local_entity",
+      "zh": "本地主体",
+      "en": "Local entities"
+    },
+    {
+      "key": "key_documents",
+      "zh": "重点材料/门槛",
+      "en": "Key documents / thresholds"
+    },
+    {
+      "key": "premarket_checks",
+      "zh": "上市前核查",
+      "en": "Pre-market checks"
+    }
+  ],
+  "markets": [
+    {
+      "code": "SA",
+      "name_zh": "沙特",
+      "name_en": "Saudi Arabia",
+      "classification": {
+        "zh": "按 SFDA规则重新判定",
+        "en": "Reclassify under SFDA rules"
+      },
+      "pathway": {
+        "zh": "SFDA医疗器械上市许可 MDMA",
+        "en": "SFDA Medical Device Marketing Authorization (MDMA)"
+      },
+      "local_entity": {
+        "zh": "沙特授权代表及适用经营主体",
+        "en": "Saudi Authorized Representative and applicable licensed establishments"
+      },
+      "key_documents": {
+        "zh": "技术文档、QMS、性能/临床、标签和授权文件",
+        "en": "Technical documentation, QMS, performance/clinical evidence, labeling and authorization letters"
+      },
+      "premarket_checks": {
+        "zh": "许可范围、本地资质、语言及 Saudi-DI",
+        "en": "Authorization scope, local licenses, language and Saudi-DI"
+      }
+    },
+    {
+      "code": "BR",
+      "name_zh": "巴西",
+      "name_en": "Brazil",
+      "classification": {
+        "zh": "ANVISA III/IV类通常 registro",
+        "en": "ANVISA Class III/IV usually requires registro"
+      },
+      "pathway": {
+        "zh": "巴西境内持有人向 ANVISA申请注册",
+        "en": "Brazilian registration holder applies to ANVISA for registration"
+      },
+      "local_entity": {
+        "zh": "持有人、进口商及 AFE/本地许可",
+        "en": "Registration holder, importer and AFE/local licenses"
+      },
+      "key_documents": {
+        "zh": "技术卷宗、GMP/CBPF、葡语资料；INMETRO依产品适用",
+        "en": "Technical dossier, GMP/CBPF, Portuguese documentation; INMETRO where applicable to the product"
+      },
+      "premarket_checks": {
+        "zh": "产品分组、场地、注册范围及特殊认证",
+        "en": "Product grouping, sites, registration scope and special certifications"
+      }
+    },
+    {
+      "code": "DE",
+      "name_zh": "德国",
+      "name_en": "Germany",
+      "classification": {
+        "zh": "EU MDR Annex VIII重新判定",
+        "en": "Reclassify under EU MDR Annex VIII"
+      },
+      "pathway": {
+        "zh": "MDR符合性评估及 CE，不另假定德国独立注册证",
+        "en": "MDR conformity assessment and CE marking; no separate German registration certificate is assumed"
+      },
+      "local_entity": {
+        "zh": "EU AR、PRRC、进口商等运营者",
+        "en": "EU AR, PRRC, importer and other economic operators"
+      },
+      "key_documents": {
+        "zh": "NB、技术文档、临床证据、DoC、UDI及德语资料",
+        "en": "NB, technical documentation, clinical evidence, DoC, UDI and German-language documentation"
+      },
+      "premarket_checks": {
+        "zh": "EUDAMED现行模块/期限、MPDG和德国本地义务",
+        "en": "Current EUDAMED modules/deadlines, MPDG and German national obligations"
+      }
+    },
+    {
+      "code": "TR",
+      "name_zh": "土耳其",
+      "name_en": "Türkiye",
+      "classification": {
+        "zh": "按土耳其现行器械法规判定",
+        "en": "Classify under current Turkish medical device regulations"
+      },
+      "pathway": {
+        "zh": "合规/CE证据及 ÜTS企业和产品登记",
+        "en": "Conformity/CE evidence plus ÜTS company and product registration"
+      },
+      "local_entity": {
+        "zh": "土耳其 AR、进口商及 ÜTS主体",
+        "en": "Turkish AR, importer and ÜTS-registered entity"
+      },
+      "key_documents": {
+        "zh": "证书、DoC、技术资料、土语标签/IFU及授权",
+        "en": "Certificates, DoC, technical documentation, Turkish labeling/IFU and authorization letters"
+      },
+      "premarket_checks": {
+        "zh": "证书接受条件、ÜTS状态、追溯和经营要求",
+        "en": "Certificate acceptance conditions, ÜTS status, traceability and operating requirements"
+      }
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1",
+      "market": "ALL",
+      "stage": {
+        "zh": "产品界定",
+        "en": "Product definition"
+      },
+      "task": {
+        "zh": "冻结名称、型号、用途、适应症、人群、使用场景和作用原理",
+        "en": "Freeze product name, models, intended use, indications, patient population, use environment and mechanism of action"
+      },
+      "note": {
+        "zh": "作为四国分类和临床策略输入",
+        "en": "Input for classification and clinical strategy in all four markets"
+      },
+      "refs": [
+        "SA1",
+        "BR1",
+        "DE1",
+        "TR1"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "2",
+      "market": "ALL",
+      "stage": {
+        "zh": "特殊属性",
+        "en": "Special characteristics"
+      },
+      "task": {
+        "zh": "确认是否 IVD、植入、无菌、有源、软件、组合产品或特殊材料",
+        "en": "Confirm whether the device is an IVD, implantable, sterile, active, software, a combination product or contains special materials"
+      },
+      "note": {
+        "zh": "本表按非 IVD 一般医疗器械；IVD另选法规",
+        "en": "This checklist assumes a general non-IVD medical device; IVDs follow separate regulations"
+      },
+      "refs": [
+        "SA1",
+        "BR1",
+        "DE1",
+        "TR1"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "3",
+      "market": "ALL",
+      "stage": {
+        "zh": "分类",
+        "en": "Classification"
+      },
+      "task": {
+        "zh": "分别建立四国分类规则、适用理由及产品分组文件",
+        "en": "Prepare classification rules, rationale and product grouping documents for each of the four markets"
+      },
+      "note": {
+        "zh": "中国 III 类不直接等于各市场 III 类或最高风险类",
+        "en": "China Class III does not automatically equal Class III or the highest risk class in other markets"
+      },
+      "refs": [
+        "SA1",
+        "BR1",
+        "DE1",
+        "TR1"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "4",
+      "market": "ALL",
+      "stage": {
+        "zh": "质量体系",
+        "en": "Quality system"
+      },
+      "task": {
+        "zh": "核对制造商、场地、外包和 QMS证书范围/有效期",
+        "en": "Check manufacturer, sites, outsourced processes and QMS certificate scope/validity"
+      },
+      "note": {
+        "zh": "ISO 13485不代表自动获得各市场准入",
+        "en": "ISO 13485 does not automatically grant market access in any market"
+      },
+      "refs": [
+        "SA1",
+        "BR1",
+        "DE1",
+        "TR1"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "5",
+      "market": "ALL",
+      "stage": {
+        "zh": "技术文档",
+        "en": "Technical documentation"
+      },
+      "task": {
+        "zh": "编制产品描述、设计制造、安全性能及适用标准清单",
+        "en": "Prepare device description, design and manufacturing information, safety and performance data and list of applicable standards"
+      },
+      "note": {
+        "zh": "标准认可和版本须按市场核对",
+        "en": "Standard recognition and versions must be checked market by market"
+      },
+      "refs": [
+        "SA1",
+        "BR1",
+        "DE1",
+        "TR1"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "6",
+      "market": "ALL",
+      "stage": {
+        "zh": "风险管理",
+        "en": "Risk management"
+      },
+      "task": {
+        "zh": "准备风险计划、报告及获益风险结论",
+        "en": "Prepare risk management plan, report and benefit-risk conclusion"
+      },
+      "note": {
+        "zh": "覆盖生命周期、可用性和残余风险",
+        "en": "Cover the full lifecycle, usability and residual risks"
+      },
+      "refs": [
+        "SA1",
+        "BR1",
+        "DE1",
+        "TR1"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "7",
+      "market": "ALL",
+      "stage": {
+        "zh": "验证确认",
+        "en": "Verification and validation"
+      },
+      "task": {
+        "zh": "核对性能、电气/EMC、生物相容性等适用报告",
+        "en": "Check applicable reports such as performance, electrical safety/EMC and biocompatibility"
+      },
+      "note": {
+        "zh": "只保留与产品属性有关的试验",
+        "en": "Keep only tests relevant to the device's characteristics"
+      },
+      "refs": [
+        "SA1",
+        "BR1",
+        "DE1",
+        "TR1"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "8",
+      "market": "ALL",
+      "stage": {
+        "zh": "专项验证",
+        "en": "Specific validations"
+      },
+      "task": {
+        "zh": "核对灭菌、包装运输、有效期、软件/网络安全证据",
+        "en": "Check sterilization, packaging and transport, shelf life and software/cybersecurity evidence"
+      },
+      "note": {
+        "zh": "依据具体器械和市场判断适用性",
+        "en": "Determine applicability by device and market"
+      },
+      "refs": [
+        "SA1",
+        "BR1",
+        "DE1",
+        "TR1"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "9",
+      "market": "ALL",
+      "stage": {
+        "zh": "临床",
+        "en": "Clinical"
+      },
+      "task": {
+        "zh": "建立临床评价/研究策略及证据差距表",
+        "en": "Define the clinical evaluation/investigation strategy and an evidence gap table"
+      },
+      "note": {
+        "zh": "不得假定高风险产品一律可用文献或等同性替代试验",
+        "en": "Do not assume literature or equivalence can always replace clinical investigations for high-risk devices"
+      },
+      "refs": [
+        "SA1",
+        "BR1",
+        "DE1",
+        "TR1"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "10",
+      "market": "ALL",
+      "stage": {
+        "zh": "标签",
+        "en": "Labeling"
+      },
+      "task": {
+        "zh": "建立各市场标签/IFU、翻译、符号和标识清单",
+        "en": "Prepare a per-market list of labeling/IFU, translations, symbols and markings"
+      },
+      "note": {
+        "zh": "语言例外、公证认证要求按具体文件核查",
+        "en": "Check language exemptions and notarization/legalization requirements document by document"
+      },
+      "refs": [
+        "SA1",
+        "BR1",
+        "DE1",
+        "TR1"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "11",
+      "market": "ALL",
+      "stage": {
+        "zh": "上市后",
+        "en": "Post-market"
+      },
+      "task": {
+        "zh": "建立投诉、警戒、召回、变更及续期责任表",
+        "en": "Set up a responsibility matrix for complaints, vigilance, recalls, changes and renewals"
+      },
+      "note": {
+        "zh": "时限、渠道和周期以当地现行规定为准",
+        "en": "Timelines, channels and intervals follow current local regulations"
+      },
+      "refs": [
+        "SA1",
+        "BR1",
+        "DE1",
+        "TR1"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "12",
+      "market": "SA",
+      "stage": {
+        "zh": "分类",
+        "en": "Classification"
+      },
+      "task": {
+        "zh": "确认 SFDA分类及 MDMA申请路径",
+        "en": "Confirm SFDA classification and MDMA application route"
+      },
+      "note": {
+        "zh": "中国 III 类不自动等于 Class D",
+        "en": "China Class III does not automatically equal Class D"
+      },
+      "refs": [
+        "SA1"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "13",
+      "market": "SA",
+      "stage": {
+        "zh": "本地主体",
+        "en": "Local entity"
+      },
+      "task": {
+        "zh": "委任沙特授权代表并核对许可、职责和期限",
+        "en": "Appoint a Saudi Authorized Representative and check its license, responsibilities and term"
+      },
+      "note": {
+        "zh": "以境外制造商相关要求为准",
+        "en": "Follow the requirements for foreign manufacturers"
+      },
+      "refs": [
+        "SA1"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "14",
+      "market": "SA",
+      "stage": {
+        "zh": "企业资料",
+        "en": "Company documents"
+      },
+      "task": {
+        "zh": "准备制造商/场地、QMS、授权和账户资料",
+        "en": "Prepare manufacturer/site, QMS, authorization and account documents"
+      },
+      "note": {
+        "zh": "核对当前平台、格式及主体资质",
+        "en": "Check the current platform, formats and entity qualifications"
+      },
+      "refs": [
+        "SA1"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "15",
+      "market": "SA",
+      "stage": {
+        "zh": "技术卷宗",
+        "en": "Technical dossier"
+      },
+      "task": {
+        "zh": "准备 MDMA表单、技术文档、风险、性能及临床资料",
+        "en": "Prepare MDMA forms, technical documentation, risk, performance and clinical data"
+      },
+      "note": {
+        "zh": "按现行 MDS-REQ1及对应路径做差距评估",
+        "en": "Run a gap assessment against current MDS-REQ1 and the applicable route"
+      },
+      "refs": [
+        "SA1"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "16",
+      "market": "SA",
+      "stage": {
+        "zh": "本地化",
+        "en": "Localization"
+      },
+      "task": {
+        "zh": "核对阿拉伯语/英语标签、IFU及 Saudi-DI要求",
+        "en": "Check Arabic/English labeling, IFU and Saudi-DI requirements"
+      },
+      "note": {
+        "zh": "按使用者、器械类别和当前实施状态确认",
+        "en": "Confirm by user type, device class and current implementation status"
+      },
+      "refs": [
+        "SA1"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "17",
+      "market": "SA",
+      "stage": {
+        "zh": "提交维护",
+        "en": "Submission and maintenance"
+      },
+      "task": {
+        "zh": "确认费用、提交补正、许可范围及进口经营资质",
+        "en": "Confirm fees, submission and deficiency responses, authorization scope and import/distribution licenses"
+      },
+      "note": {
+        "zh": "MDMA与经营者许可、上市后义务分别管理",
+        "en": "Manage MDMA, establishment licenses and post-market obligations separately"
+      },
+      "refs": [
+        "SA1"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "18",
+      "market": "BR",
+      "stage": {
+        "zh": "分类",
+        "en": "Classification"
+      },
+      "task": {
+        "zh": "依据 RDC 751/2022及修订确认类别、产品分组和路径",
+        "en": "Confirm class, product grouping and route under RDC 751/2022 and its amendments"
+      },
+      "note": {
+        "zh": "III/IV类一般医疗器械通常走 registro；IVD另查",
+        "en": "Class III/IV general medical devices usually follow registro; check IVDs separately"
+      },
+      "refs": [
+        "BR1",
+        "BR2"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "19",
+      "market": "BR",
+      "stage": {
+        "zh": "本地主体",
+        "en": "Local entity"
+      },
+      "task": {
+        "zh": "确定境内注册持有人，核对 AFE及本地经营许可",
+        "en": "Designate the Brazilian registration holder and check AFE and local operating licenses"
+      },
+      "note": {
+        "zh": "明确持证权、经销关系和资料获取权",
+        "en": "Clarify registration ownership, distribution relationships and access to documents"
+      },
+      "refs": [
+        "BR1",
+        "BR2"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "20",
+      "market": "BR",
+      "stage": {
+        "zh": "制造质量",
+        "en": "Manufacturing quality"
+      },
+      "task": {
+        "zh": "核对制造场地 GMP/CBPF要求及可接受凭证",
+        "en": "Check GMP/CBPF requirements for manufacturing sites and acceptable evidence"
+      },
+      "note": {
+        "zh": "证书、受理或其他路径的接受条件须核实",
+        "en": "Verify acceptance conditions for certificates, pending applications or other routes"
+      },
+      "refs": [
+        "BR1",
+        "BR2"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "21",
+      "market": "BR",
+      "stage": {
+        "zh": "专项认证",
+        "en": "Special certification"
+      },
+      "task": {
+        "zh": "判断 INMETRO等本地符合性认证是否适用",
+        "en": "Determine whether INMETRO or other local conformity certification applies"
+      },
+      "note": {
+        "zh": "不是所有器械均需此认证",
+        "en": "Not all devices require this certification"
+      },
+      "refs": [
+        "BR1",
+        "BR2"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "22",
+      "market": "BR",
+      "stage": {
+        "zh": "技术卷宗",
+        "en": "Technical dossier"
+      },
+      "task": {
+        "zh": "准备注册表单、技术卷宗、性能/临床证据及声明",
+        "en": "Prepare registration forms, technical dossier, performance/clinical evidence and declarations"
+      },
+      "note": {
+        "zh": "按现行目录和具体产品准备",
+        "en": "Prepare according to the current document list and the specific product"
+      },
+      "refs": [
+        "BR1",
+        "BR2"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "23",
+      "market": "BR",
+      "stage": {
+        "zh": "本地化",
+        "en": "Localization"
+      },
+      "task": {
+        "zh": "完成葡萄牙语标签/IFU及文件翻译认证核查",
+        "en": "Complete Portuguese labeling/IFU and check translation and certification of documents"
+      },
+      "note": {
+        "zh": "公证认证不应笼统列为全部材料必需",
+        "en": "Do not list notarization/legalization as required for all documents by default"
+      },
+      "refs": [
+        "BR1",
+        "BR2"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "24",
+      "market": "BR",
+      "stage": {
+        "zh": "提交维护",
+        "en": "Submission and maintenance"
+      },
+      "task": {
+        "zh": "确认费用、申报补正、注册范围及变更/上市后要求",
+        "en": "Confirm fees, submission and deficiency responses, registration scope and change/post-market requirements"
+      },
+      "note": {
+        "zh": "注册证不替代进口经营资质",
+        "en": "Registration does not replace import and operating licenses"
+      },
+      "refs": [
+        "BR1",
+        "BR2"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "25",
+      "market": "DE",
+      "stage": {
+        "zh": "分类",
+        "en": "Classification"
+      },
+      "task": {
+        "zh": "按 MDR Annex VIII分类并确定符合性评估路线",
+        "en": "Classify under MDR Annex VIII and determine the conformity assessment route"
+      },
+      "note": {
+        "zh": "不能直接照搬中国 III 类结论",
+        "en": "Do not carry over the China Class III conclusion directly"
+      },
+      "refs": [
+        "DE1",
+        "DE2",
+        "DE3",
+        "DE4"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "26",
+      "market": "DE",
+      "stage": {
+        "zh": "本地主体",
+        "en": "Local entity"
+      },
+      "task": {
+        "zh": "确认 EU授权代表、PRRC、进口商及分销商职责",
+        "en": "Confirm the responsibilities of the EU Authorized Representative, PRRC, importer and distributors"
+      },
+      "note": {
+        "zh": "核对 MDR Articles 11、13、14、15",
+        "en": "Check MDR Articles 11, 13, 14 and 15"
+      },
+      "refs": [
+        "DE1",
+        "DE2",
+        "DE3",
+        "DE4"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "27",
+      "market": "DE",
+      "stage": {
+        "zh": "公告机构",
+        "en": "Notified Body"
+      },
+      "task": {
+        "zh": "选择产品指定范围匹配的 NB并启动评审",
+        "en": "Select an NB whose designation scope covers the device and start the assessment"
+      },
+      "note": {
+        "zh": "MDR III类通常需 NB介入；核对 NANDO范围",
+        "en": "MDR Class III usually requires NB involvement; check the scope in NANDO"
+      },
+      "refs": [
+        "DE1",
+        "DE2",
+        "DE3",
+        "DE4"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "28",
+      "market": "DE",
+      "stage": {
+        "zh": "技术文档",
+        "en": "Technical documentation"
+      },
+      "task": {
+        "zh": "完成 Annex II/III、GSPR checklist、QMS和验证证据",
+        "en": "Complete Annex II/III documentation, GSPR checklist, QMS and verification evidence"
+      },
+      "note": {
+        "zh": "按所选评估程序组织",
+        "en": "Organize according to the selected assessment procedure"
+      },
+      "refs": [
+        "DE1",
+        "DE2",
+        "DE3",
+        "DE4"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "29",
+      "market": "DE",
+      "stage": {
+        "zh": "临床专项",
+        "en": "Clinical specifics"
+      },
+      "task": {
+        "zh": "确认临床研究、PMCF、SSCP和植入卡适用性",
+        "en": "Confirm applicability of clinical investigations, PMCF, SSCP and implant card"
+      },
+      "note": {
+        "zh": "III类/植入器械额外要求与例外需产品级判断",
+        "en": "Additional requirements and exemptions for Class III/implantable devices need product-level assessment"
+      },
+      "refs": [
+        "DE1",
+        "DE2",
+        "DE3",
+        "DE4"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "30",
+      "market": "DE",
+      "stage": {
+        "zh": "证书标签",
+        "en": "Certificates and labeling"
+      },
+      "task": {
+        "zh": "核对 NB证书、EU DoC、CE标识及德语标签/IFU",
+        "en": "Check the NB certificate, EU DoC, CE marking and German labeling/IFU"
+      },
+      "note": {
+        "zh": "新 MDR路径与合法旧指令过渡路径分开判断",
+        "en": "Assess the new MDR route and the legacy-directive transition route separately"
+      },
+      "refs": [
+        "DE1",
+        "DE2",
+        "DE3",
+        "DE4"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "31",
+      "market": "DE",
+      "stage": {
+        "zh": "数据库",
+        "en": "Database"
+      },
+      "task": {
+        "zh": "核对 SRN、UDI、EUDAMED强制模块和存量过渡期",
+        "en": "Check SRN, UDI, mandatory EUDAMED modules and transition periods for devices already on the market"
+      },
+      "note": {
+        "zh": "2026模块状态敏感，须复核欧委会最新公告",
+        "en": "EUDAMED module status in 2026 is time-sensitive; recheck the latest European Commission notices"
+      },
+      "refs": [
+        "DE1",
+        "DE2",
+        "DE3",
+        "DE4"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "32",
+      "market": "DE",
+      "stage": {
+        "zh": "德国落地",
+        "en": "German national requirements"
+      },
+      "task": {
+        "zh": "按所在地/角色核查 MPDG、州主管机关和通知义务",
+        "en": "Check MPDG, competent state authority and notification obligations by location and role"
+      },
+      "note": {
+        "zh": "一般 CE准入不等于另办德国独立产品注册证",
+        "en": "General CE market access does not require a separate German product registration certificate"
+      },
+      "refs": [
+        "DE1",
+        "DE2",
+        "DE3",
+        "DE4"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "33",
+      "market": "DE",
+      "stage": {
+        "zh": "上市后",
+        "en": "Post-market"
+      },
+      "task": {
+        "zh": "落实 PMS、PSUR、PMCF、警戒和证书监督",
+        "en": "Implement PMS, PSUR, PMCF, vigilance and certificate surveillance"
+      },
+      "note": {
+        "zh": "周期和报告对象按实际类别及现行规定核对",
+        "en": "Check intervals and reporting recipients against the actual class and current rules"
+      },
+      "refs": [
+        "DE1",
+        "DE2",
+        "DE3",
+        "DE4"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "34",
+      "market": "TR",
+      "stage": {
+        "zh": "分类",
+        "en": "Classification"
+      },
+      "task": {
+        "zh": "确认土耳其现行分类、合规路线和过渡条款",
+        "en": "Confirm current Turkish classification, conformity route and transitional provisions"
+      },
+      "note": {
+        "zh": "不能把中国 III类或欧盟证书当成本地分类结论",
+        "en": "Do not treat China Class III or an EU certificate as the local classification outcome"
+      },
+      "refs": [
+        "TR1",
+        "TR2"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "35",
+      "market": "TR",
+      "stage": {
+        "zh": "本地主体",
+        "en": "Local entity"
+      },
+      "task": {
+        "zh": "确认土耳其授权代表、进口商和 ÜTS操作主体",
+        "en": "Confirm the Turkish Authorized Representative, importer and the entity operating in ÜTS"
+      },
+      "note": {
+        "zh": "按制造商所在地及运营者角色核查",
+        "en": "Check by manufacturer location and economic operator role"
+      },
+      "refs": [
+        "TR1",
+        "TR2"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "36",
+      "market": "TR",
+      "stage": {
+        "zh": "合规证据",
+        "en": "Conformity evidence"
+      },
+      "task": {
+        "zh": "核对 CE证书、DoC、NB范围及本地接受条件",
+        "en": "Check CE certificate, DoC, NB scope and local acceptance conditions"
+      },
+      "note": {
+        "zh": "CE不代表全部土耳其本地手续已完成",
+        "en": "CE marking does not mean all Turkish local formalities are complete"
+      },
+      "refs": [
+        "TR1",
+        "TR2"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "37",
+      "market": "TR",
+      "stage": {
+        "zh": "企业登记",
+        "en": "Company registration"
+      },
+      "task": {
+        "zh": "办理所需 ÜTS企业资料和授权文件核验",
+        "en": "Complete the required ÜTS company records and verification of authorization documents"
+      },
+      "note": {
+        "zh": "翻译公证、材料形式、系统角色须当前确认",
+        "en": "Translation/notarization, document format and system roles must be confirmed against current rules"
+      },
+      "refs": [
+        "TR1",
+        "TR2"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "38",
+      "market": "TR",
+      "stage": {
+        "zh": "产品登记",
+        "en": "Product registration"
+      },
+      "task": {
+        "zh": "办理 ÜTS产品记录及关联证书/声明",
+        "en": "Create ÜTS product records and link certificates/declarations"
+      },
+      "note": {
+        "zh": "核对企业、产品和证书信息一致性",
+        "en": "Check consistency of company, product and certificate data"
+      },
+      "refs": [
+        "TR1",
+        "TR2"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "39",
+      "market": "TR",
+      "stage": {
+        "zh": "本地化",
+        "en": "Localization"
+      },
+      "task": {
+        "zh": "核对土耳其语标签/IFU、UDI及本地标识",
+        "en": "Check Turkish labeling/IFU, UDI and local markings"
+      },
+      "note": {
+        "zh": "语言例外及追溯要求依产品判断",
+        "en": "Language exemptions and traceability requirements depend on the product"
+      },
+      "refs": [
+        "TR1",
+        "TR2"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    },
+    {
+      "id": "40",
+      "market": "TR",
+      "stage": {
+        "zh": "上市维护",
+        "en": "Market maintenance"
+      },
+      "task": {
+        "zh": "落实 ÜTS追溯、警戒、召回和记录变更",
+        "en": "Maintain ÜTS traceability, vigilance, recalls and record changes"
+      },
+      "note": {
+        "zh": "明确制造商、AR和进口商持续责任",
+        "en": "Define the ongoing responsibilities of the manufacturer, AR and importer"
+      },
+      "refs": [
+        "TR1",
+        "TR2"
+      ],
+      "applicability": "tbd",
+      "owner": "",
+      "due": "",
+      "status": "todo",
+      "evidence": ""
+    }
+  ],
+  "sources": [
+    {
+      "id": "SA1",
+      "market": "SA",
+      "market_label": {
+        "zh": "沙特",
+        "en": "Saudi Arabia"
+      },
+      "org": {
+        "zh": "SFDA 医疗器械官方入口",
+        "en": "SFDA medical devices portal"
+      },
+      "url": "https://www.sfda.gov.sa/en/medical-devices",
+      "topic": {
+        "zh": "核对现行 MDS-REQ1、分类、AR、Saudi-DI和警戒指南",
+        "en": "Check current MDS-REQ1, classification, AR, Saudi-DI and vigilance guidance"
+      }
+    },
+    {
+      "id": "BR1",
+      "market": "BR",
+      "market_label": {
+        "zh": "巴西",
+        "en": "Brazil"
+      },
+      "org": {
+        "zh": "ANVISA 医疗器械法规",
+        "en": "ANVISA medical device legislation"
+      },
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/produtosparasaude/legislacao",
+      "topic": {
+        "zh": "核对 RDC 751/2022及修订、GMP/CBPF要求",
+        "en": "Check RDC 751/2022 and amendments, GMP/CBPF requirements"
+      }
+    },
+    {
+      "id": "BR2",
+      "market": "BR",
+      "market_label": {
+        "zh": "巴西",
+        "en": "Brazil"
+      },
+      "org": {
+        "zh": "ANVISA 医疗器械主题入口",
+        "en": "ANVISA medical devices portal"
+      },
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/produtosparasaude",
+      "topic": {
+        "zh": "注册服务、AFE、INMETRO适用性及上市后事项",
+        "en": "Registration services, AFE, INMETRO applicability and post-market matters"
+      }
+    },
+    {
+      "id": "DE1",
+      "market": "DE",
+      "market_label": {
+        "zh": "德国/EU",
+        "en": "Germany/EU"
+      },
+      "org": {
+        "zh": "Regulation (EU) 2017/745",
+        "en": "Regulation (EU) 2017/745"
+      },
+      "url": "https://eur-lex.europa.eu/eli/reg/2017/745/oj",
+      "topic": {
+        "zh": "查合并文本、修订、过渡条款及附件",
+        "en": "Consolidated text, amendments, transitional provisions and annexes"
+      }
+    },
+    {
+      "id": "DE2",
+      "market": "DE",
+      "market_label": {
+        "zh": "德国/EU",
+        "en": "Germany/EU"
+      },
+      "org": {
+        "zh": "European Commission 医疗器械",
+        "en": "European Commission medical devices"
+      },
+      "url": "https://health.ec.europa.eu/medical-devices-sector_en",
+      "topic": {
+        "zh": "NB指定范围、NANDO及实施指南",
+        "en": "NB designation scope, NANDO and implementation guidance"
+      }
+    },
+    {
+      "id": "DE3",
+      "market": "DE",
+      "market_label": {
+        "zh": "德国/EU",
+        "en": "Germany/EU"
+      },
+      "org": {
+        "zh": "European Commission EUDAMED",
+        "en": "European Commission EUDAMED"
+      },
+      "url": "https://health.ec.europa.eu/medical-devices-eudamed/overview_en",
+      "topic": {
+        "zh": "核对模块强制适用日期及各主体/存量产品过渡期",
+        "en": "Check mandatory application dates of modules and transition periods for each actor and for legacy devices"
+      }
+    },
+    {
+      "id": "DE4",
+      "market": "DE",
+      "market_label": {
+        "zh": "德国",
+        "en": "Germany"
+      },
+      "org": {
+        "zh": "BfArM / MPDG",
+        "en": "BfArM / MPDG"
+      },
+      "url": "https://www.bfarm.de/EN/MedicalDevices/_node.html",
+      "topic": {
+        "zh": "MPDG另查 https://www.gesetze-im-internet.de/mpdg/",
+        "en": "For MPDG see also https://www.gesetze-im-internet.de/mpdg/"
+      }
+    },
+    {
+      "id": "TR1",
+      "market": "TR",
+      "market_label": {
+        "zh": "土耳其",
+        "en": "Türkiye"
+      },
+      "org": {
+        "zh": "TİTCK 官方入口",
+        "en": "TİTCK official portal"
+      },
+      "url": "https://www.titck.gov.tr/",
+      "topic": {
+        "zh": "核对现行 Tıbbi Cihaz Yönetmeliği及公告",
+        "en": "Check the current Tıbbi Cihaz Yönetmeliği (Medical Device Regulation) and announcements"
+      }
+    },
+    {
+      "id": "TR2",
+      "market": "TR",
+      "market_label": {
+        "zh": "土耳其",
+        "en": "Türkiye"
+      },
+      "org": {
+        "zh": "ÜTS 官方入口",
+        "en": "ÜTS official portal"
+      },
+      "url": "https://uts.saglik.gov.tr/",
+      "topic": {
+        "zh": "核对企业/产品登记、文件形式和追溯要求",
+        "en": "Check company/product registration, document formats and traceability requirements"
+      }
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "meta": {"note": "规则词表。英、西两种语言都检查；改词表不用改代码。规则说明见 README 的校验规则表"},
+  "negation": ["not", "no", "never", "cannot", "can't", "don't", "do not", "doesn't", "does not", "isn't", "is not", "aren't", "without approval", "nunca", "ni", "tampoco", "不", "未", "没有"],
+  "pending": ["to be confirmed", "pending", "in process", "under review", "will check", "will confirm", "will be confirmed", "por confirmar", "en trámite", "en proceso", "pendiente", "lo verificaremos", "待确认", "待核实", "需核实", "需要核实", "由销售核实", "尚未确认", "以正式文件为准"],
+  "deferral": ["subject to", "manager approval", "management approval", "requires approval", "requires the approval", "approval of our manager", "will discuss", "case by case", "sujeto a", "sujeta a", "requiere aprobación", "requiere la aprobación", "aprobación de la gerencia", "aprobación de nuestro gerente", "lo evaluaremos", "your request", "request for exclusivity", "exclusivity request", "su solicitud", "solicitud de exclusividad", "需经理审批", "待销售核实", "需销售确认", "由销售核实", "需要审批"],
+  "decline": ["cannot supply", "can't supply", "cannot sell", "we only supply", "no podemos suministrar", "no podemos vender", "solo vendemos", "不向个人", "不能卖给个人", "不能供应", "只向有资质"],
+  "decline_patterns": ["\\b(?:cannot|can't|unable to|not able to|will not|won't)\\s+(?:\\w+\\s+){0,2}(?:supply|sell|ship|provide)\\b",
+                       "\\bno\\s+(?:podemos|es posible)\\s+(?:\\w+\\s+){0,2}(?:suministrar|vender|enviar)\\b"],
+  "C1_body": ["breast augmentation", "buttock augmentation", "breast enhancement", "butt lift", "buttock", "buttocks", "breast", "breasts", "body contouring", "aumento de glúteos", "glúteos", "glúteo", "aumento mamario", "senos", "busto", "mamas", "contorno corporal", "隆胸", "隆臀", "丰胸", "丰臀", "胸部", "臀部", "身体部位填充"],
+  "C2_claims": ["registered", "registration", "approved", "cleared", "clearance", "customs", "legally sold", "registrado", "registrada", "registro", "aprobado", "aprobada", "aduana", "despacho aduanero", "可以清关", "合法销售"],
+  "C2_patterns": ["已(?:经)?(?:在[^，。！？；\\n]{0,12})?(?:取得|获得)?[^，。！？；\\n]{0,8}(?:注册|获批|批准|备案)"],
+  "C3_inquiry": ["inject myself", "inject it myself", "self-inject", "self inject", "at home", "personal use", "yo misma", "yo mismo", "inyectarme", "en casa", "uso personal", "自己打", "自己注射", "自行注射", "自用", "在家打"],
+  "C3_decline": ["licensed", "qualified medical", "medical professional", "only supply", "only sell", "con licencia", "profesional médico", "solo vendemos", "solo suministramos", "有资质的经销商", "医疗机构", "执业医生", "合格医务人员"],
+  "C5_terms": ["no side effects", "zero side effects", "without side effects", "free of side effects", "no skin test", "no rejection", "without any rejection", "100% safe", "completely safe", "risk-free", "sin efectos secundarios", "sin efectos adversos", "sin prueba cutánea", "sin rechazo", "100% seguro", "totalmente seguro", "sin riesgo", "sin riesgos"],
+  "C5_negatable": ["permanent", "permanente", "permanentes", "lifetime", "de por vida", "零风险", "无副作用", "没有副作用", "永久", "100%安全", "绝对安全", "完全安全"],
+  "C6_context": ["clinical", "clinically", "trial", "study", "studies", "efficacy", "effective rate", "satisfaction", "patients", "maintenance rate", "clínico", "clínicos", "ensayo", "estudio", "eficacia", "satisfacción", "pacientes", "临床", "有效率", "满意度", "病例", "维持率"],
+  "C6_source": ["source:", "according to", "published in", "fuente:", "según", "publicado en", "来源：", "出处：", "引自"],
+  "P1_terms": ["best", "No.1", "No. 1", "#1", "number one", "top 10", "top ten", "world-leading", "world leading", "leading brand", "el mejor", "la mejor", "los mejores", "mejor que", "número uno", "líder mundial", "全球第一", "行业第一", "排名第一", "全球前十", "最好的", "顶级", "领先品牌"],
+  "P1_exceptions": ["best regards", "best wishes", "all the best", "with best", "mis mejores deseos"],
+  "P2_terms": ["Restylane", "Juvederm", "Juvéderm", "Teosyal", "Belotero", "Stylage", "Revolax", "Neuramis", "Radiesse", "Sculptra", "Galderma", "Allergan", "Aquaderm", "swedish brand", "marca sueca", "瑞蓝", "乔雅登", "伊婉"],
+  "K1_required": {
+    "incoterm": ["EXW", "FOB", "CIF", "CFR", "DAP", "DDP", "Incoterm"],
+    "currency": ["USD", "US$", "EUR", "€", "$", "dollars", "dólares"],
+    "moq": ["MOQ", "minimum order", "pedido mínimo", "cantidad mínima"],
+    "validity": ["valid for", "validity", "válida por", "validez", "vigencia"],
+    "payment": ["T/T", "L/C", "deposit", "payment", "anticipo", "pago"]
+  },
+  "K1_labels": {"incoterm": "贸易术语", "currency": "币种", "moq": "MOQ", "validity": "报价有效期", "payment": "付款方式"},
+  "K1_labels_en": {"incoterm": "Incoterm", "currency": "currency", "moq": "MOQ", "validity": "quote validity", "payment": "payment terms"},
+  "K2_terms": ["exclusive distribution", "exclusive distributor", "exclusive distributorship", "exclusive agent", "exclusive rights", "exclusivity", "sole distributor", "sole agent", "price protection", "guaranteed registration", "guarantee registration", "distribución exclusiva", "distribuidor exclusivo", "exclusividad", "derechos exclusivos", "protección de precios", "garantizamos el registro", "独家代理", "独家经销", "总代理", "价格保护", "保证注册"],
+  "product_aliases": {
+    "HF-FL": ["Fine Lines", "Fine Line"],
+    "HF-DERM": ["Derm"],
+    "HF-DD": ["Derm Deep"],
+    "HF-DP": ["Derm Plus"],
+    "HF-SS": ["Sub Skin", "SubSkin"],
+    "HAIRONT-KNEE": ["Hairont", "knee injection", "osteoarthritis", "osteoartritis"],
+    "HF-OVD": ["OVD", "AQUA20", "ophthalmic viscoelastic", "viscoelástico oftálmico"]
+  },
+  "heuristics": {
+    "lang_es": ["hola", "somos", "precio", "gracias", "quisiera", "queremos", "nos interesa", "nos interesan", "también", "tienen", "cuál", "estimado", "buenos días", "por favor", "productos", "pedido"],
+    "lang_pt": ["olá", "obrigado", "obrigada", "preço", "nossa", "nosso", "também", "gostaríamos", "vocês", "têm", "não"],
+    "buyer_distributor": ["distributor", "distribuidor", "distribuidora", "importer", "importador", "importadora", "wholesale", "wholesaler", "mayorista"],
+    "buyer_clinic": ["clinic", "clinics", "med spa", "medspa", "medical spa", "dermatologist", "clínica", "consultorio", "médico estético"],
+    "intents": {
+      "price": ["price", "prices", "pricing", "quote", "quotation", "cost", "how much", "precio", "precios", "cotización", "costo", "cuánto"],
+      "moq": ["MOQ", "minimum order", "pedido mínimo", "cantidad mínima"],
+      "certificates": ["CE", "certificate", "certificates", "certification", "ISO", "certificado", "certificación"],
+      "registration": ["registration", "registered", "FDA", "INVIMA", "ANVISA", "COFEPRIS", "registro", "registrado"],
+      "samples": ["sample", "samples", "muestra", "muestras"],
+      "exclusivity": ["exclusive", "exclusivity", "sole distributor", "exclusivo", "exclusiva", "exclusividad"],
+      "shipping": ["shipping", "delivery", "lead time", "DHL", "envío", "entrega"],
+      "indication": ["lips", "nasolabial", "buttock", "breast", "augmentation", "glúteos", "aumento", "labios", "senos", "indicated", "indicación"]
+    }
+  }
+}

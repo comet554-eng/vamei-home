@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "note": "示例数据，待朋友确认。status 只写资料能支持的：CE 来自画册，美国没有 FDA 批准；其余国家一律 unknown",
+    "status": {
+      "registered": "已在该国注册，可直接销售",
+      "not_registered": "未注册，不能宣称可清关或销售",
+      "unknown": "不知道，回复里只能说需确认"
+    }
+  },
+  "markets": {
+    "CO": {"name": "Colombia", "name_zh": "哥伦比亚", "regulator": "INVIMA", "status": "unknown",
+           "aliases": ["Colombia", "colombiano", "colombiana", "Bogotá", "Bogota", "Medellín", "Medellin", "Cali"]},
+    "BR": {"name": "Brazil", "name_zh": "巴西", "regulator": "ANVISA", "status": "unknown",
+           "aliases": ["Brazil", "Brasil", "brasileño", "São Paulo", "Sao Paulo", "Rio de Janeiro"]},
+    "CL": {"name": "Chile", "name_zh": "智利", "regulator": "ISP", "status": "unknown",
+           "aliases": ["Chile", "chileno", "chilena", "Santiago de Chile"]},
+    "MX": {"name": "Mexico", "name_zh": "墨西哥", "regulator": "COFEPRIS", "status": "unknown",
+           "aliases": ["Mexico", "México", "mexicano", "mexicana", "Guadalajara", "Monterrey"]},
+    "ES": {"name": "Spain", "name_zh": "西班牙", "regulator": "EU MDR (CE)", "status": "unknown",
+           "note": "画册称 2008 年获 CE，但未说明是否已转 MDR、批准了哪些适应症",
+           "aliases": ["Spain", "España", "Madrid", "Barcelona"]},
+    "DE": {"name": "Germany", "name_zh": "德国", "regulator": "EU MDR (CE)", "status": "unknown",
+           "note": "同 ES",
+           "aliases": ["Germany", "Deutschland", "Alemania", "Berlin", "Munich"]},
+    "GB": {"name": "United Kingdom", "name_zh": "英国", "regulator": "MHRA (UKCA/CE)", "status": "unknown",
+           "aliases": ["United Kingdom", "UK", "England", "Reino Unido", "London", "Londres", "Manchester"]},
+    "SA": {"name": "Saudi Arabia", "name_zh": "沙特", "regulator": "SFDA", "status": "unknown",
+           "aliases": ["Saudi Arabia", "Saudi", "KSA", "Arabia Saudita", "Arabia Saudí", "Riyadh", "Jeddah", "Dammam", "沙特阿拉伯", "利雅得", "吉达"]},
+    "TR": {"name": "Turkey", "name_zh": "土耳其", "regulator": "TİTCK", "status": "unknown",
+           "aliases": ["Turkey", "Türkiye", "Turkiye", "Turquía", "Turquia", "Istanbul", "İstanbul", "Ankara", "Izmir", "İzmir", "伊斯坦布尔", "安卡拉"]},
+    "US": {"name": "United States", "name_zh": "美国", "regulator": "FDA", "status": "not_registered",
+           "note": "三份资料都没有 FDA 批准",
+           "aliases": ["United States", "USA", "US", "U.S.", "Estados Unidos", "EE.UU.", "Miami", "New York", "Los Angeles", "Texas", "California", "Florida"]}
+  }
+}

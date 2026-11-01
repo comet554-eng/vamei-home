@@ -1,0 +1,26 @@
+[
+  {
+    "id": "co-distributor",
+    "label": "哥伦比亚经销商（西语）：问隆臀、CE、INVIMA、独家代理",
+    "channel": "alibaba",
+    "inquiry": "Hola, somos una distribuidora de productos estéticos en Bogotá, Colombia. Nos interesan Sub Skin y Derm Plus para aumento de glúteos. ¿Cuál es el precio por caja y el pedido mínimo? ¿Tienen certificado CE y registro INVIMA? También queremos ser su distribuidor exclusivo en Colombia.",
+    "risky_edit": "Sub Skin es ideal para aumento de glúteos, con resultados permanentes y sin efectos secundarios. Es mejor que Restylane. Le ofrecemos distribución exclusiva en Colombia y el producto ya está registrado ante INVIMA.",
+    "label_en": "Colombia distributor (Spanish): breast/glute use, CE, INVIMA, exclusivity"
+  },
+  {
+    "id": "us-medspa",
+    "label": "美国医美诊所（英语）：问价格和 FDA",
+    "channel": "email",
+    "inquiry": "Hi, we run a med spa in Miami, Florida. We are looking for a new HA filler supplier for lips and nasolabial folds. Please send prices for Derm and Derm Deep, and confirm whether your products are FDA approved.",
+    "risky_edit": "Yes, HAFILLER is FDA approved and the best filler on the market, with a 98.2% patient satisfaction rate.",
+    "label_en": "US medical spa (English): pricing and FDA"
+  },
+  {
+    "id": "uk-individual",
+    "label": "英国个人买家（英语）：想买来自己注射",
+    "channel": "alibaba",
+    "inquiry": "Hello, I'm in London and I want to buy 2 boxes of Derm for my lips. I will inject myself at home. How much including shipping?",
+    "risky_edit": "Sure! Derm 1.0ml is $25 per box, we can ship 2 boxes to London by DHL.",
+    "label_en": "UK individual (English): personal use and registration"
+  }
+]

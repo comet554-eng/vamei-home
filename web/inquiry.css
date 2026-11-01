@@ -1,0 +1,70 @@
+/* 询盘助手页（#view-inquiry）。只用队友 styles.css 里的颜色变量和组件，类名都加 iq- 前缀，不影响其他页面。 */
+#view-inquiry [hidden] { display: none !important; }
+.iq-layout { display: grid; grid-template-columns: 390px minmax(0, 1fr); gap: 18px; margin-bottom: 18px; }
+.iq-bottom { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1fr); gap: 18px; }
+.iq-layout > *, .iq-bottom > * { min-width: 0; }  /* 长型号名、长网址不撑宽网格 */
+.iq-kv td, .iq-finding, .iq-trace li { overflow-wrap: anywhere; }
+.iq-input-panel { padding-bottom: 21px; }
+.iq-input-panel > .field-label, .iq-input-panel > .field-row, .iq-input-panel > .button { margin-left: 22px; margin-right: 22px; width: calc(100% - 44px); }
+.iq-input-panel textarea#iqInquiry { min-height: 170px; }
+.iq-body { padding: 0 22px 20px; }
+.iq-body.muted, .iq-muted { color: var(--muted); font-size: 12px; }
+
+.iq-rounds { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.iq-rounds:empty { display: none; }
+.iq-tab { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--line); background: #fbfcfc; color: #62767a; border-radius: 14px; padding: 4px 11px; font-size: 11px; }
+.iq-tab.active { border-color: var(--teal); background: var(--teal-soft); color: var(--teal); font-weight: 700; }
+.iq-dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; }
+.iq-dot.red { background: var(--coral); } .iq-dot.yellow { background: var(--amber); } .iq-dot.green { background: var(--teal); }
+
+.iq-reply { white-space: pre-wrap; border: 1px solid #dde6e4; background: #fbfcfc; border-radius: 6px; padding: 14px 16px; min-height: 230px; font-size: 13px; line-height: 1.7; color: var(--ink); width: 100%; }
+textarea.iq-reply { font: inherit; font-size: 13px; resize: vertical; }
+.iq-reply mark { padding: 0 1px; border-radius: 2px; cursor: help; }
+.iq-reply mark.red { background: var(--coral-soft); border-bottom: 2px solid var(--coral); }
+.iq-reply mark.yellow { background: var(--amber-soft); border-bottom: 2px solid var(--amber); }
+.iq-reply mark sup { font-size: 9px; color: #7d8c90; margin-left: 1px; font-weight: 700; }
+.iq-fold { margin-top: 10px; font-size: 12px; color: #62767a; }
+.iq-fold summary { cursor: pointer; font-weight: 700; color: var(--teal); font-size: 11px; }
+.iq-fold pre, .iq-diff { white-space: pre-wrap; font: inherit; background: #f5f8f7; border-radius: 6px; padding: 10px 12px; margin: 8px 0 0; line-height: 1.7; }
+.iq-diff del { background: var(--coral-soft); color: #9c3c34; }
+.iq-diff ins { background: var(--teal-soft); color: #176c64; text-decoration: none; }
+
+.iq-iterate { margin-top: 16px; border-top: 1px solid var(--line); padding-top: 14px; }
+.iq-iterate .field-label { margin-bottom: 10px; }
+.iq-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.iq-actions .button:disabled { opacity: .45; cursor: default; box-shadow: none; }
+.button.iq-danger { color: var(--coral); background: white; border-color: #f1cfcb; }
+.iq-hint { font-size: 11px; color: #9a6b26; background: var(--amber-soft); border-radius: 5px; padding: 7px 10px; margin-bottom: 10px; }
+
+.status-chip.blocked { color: #b34b43; background: var(--coral-soft); }
+.iq-level { margin: 0 22px 14px; padding: 11px 13px; border-radius: 6px; font-size: 13px; font-weight: 700; background: #f0f4f3; color: #627477; border-left: 4px solid #c9d8d5; }
+.iq-level.red { background: var(--coral-soft); color: #b34b43; border-color: var(--coral); }
+.iq-level.yellow { background: var(--amber-soft); color: #a06d29; border-color: var(--amber); }
+.iq-level.green { background: var(--teal-soft); color: #238174; border-color: var(--teal); }
+.iq-finding { border-left: 3px solid #c9d8d5; background: #fafcfb; border-radius: 0 6px 6px 0; padding: 9px 11px; margin-bottom: 9px; font-size: 12px; color: #62777b; line-height: 1.55; }
+.iq-finding.red { border-color: var(--coral); } .iq-finding.yellow { border-color: var(--amber); }
+.iq-finding strong { display: block; color: var(--ink); font-size: 12px; margin-bottom: 3px; }
+.iq-rule { display: inline-block; font-size: 9px; font-weight: 800; letter-spacing: .06em; color: #7d8c90; background: #edf2f1; border-radius: 3px; padding: 1px 5px; margin-right: 6px; }
+.iq-sugg { color: #238174; margin-top: 3px; }
+
+.iq-kv { width: 100%; min-width: 0; border-collapse: collapse; font-size: 11px; } /* 队友 styles.css 给所有 table 设了 min-width: 780px */
+.iq-kv td { padding: 6px 4px; border-bottom: 1px solid #edf1f0; vertical-align: top; color: var(--ink); }
+.iq-kv td:first-child { color: var(--muted); white-space: nowrap; width: 1%; padding-right: 12px; }
+.iq-sub { color: #9ba8a9; font-size: 10px; font-weight: 800; letter-spacing: .12em; margin: 16px 0 6px; }
+.iq-market { font-size: 11px; margin-bottom: 4px; color: #62777b; }
+.status-chip.ok, .status-chip.single { color: #238174; background: var(--teal-soft); }
+.status-chip.conflict, .status-chip.suspect { color: #b34b43; background: var(--coral-soft); }
+.status-chip.image { color: #a06d29; background: var(--amber-soft); }
+.iq-kv .status-chip { padding: 2px 6px; margin-left: 4px; }
+
+.iq-trace { list-style: none; counter-reset: step; margin: 0; padding: 0; }
+.iq-trace li { counter-increment: step; position: relative; padding: 0 0 13px 30px; font-size: 11px; color: #62777b; line-height: 1.55; }
+.iq-trace li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 20px; height: 20px; border-radius: 50%; display: grid; place-items: center; background: var(--teal-soft); color: var(--teal); font-weight: 800; font-size: 10px; }
+.iq-trace strong { color: var(--ink); font-size: 12px; margin-right: 6px; }
+.iq-mode { font-size: 9px; font-weight: 800; color: var(--blue); background: var(--blue-soft); border-radius: 3px; padding: 1px 5px; margin-right: 6px; }
+.iq-ms { color: #9ba8a9; }
+.iq-err { display: block; color: var(--coral); }
+
+@media (max-width: 1100px) {
+  .iq-layout, .iq-bottom { grid-template-columns: 1fr; }
+}

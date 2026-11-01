@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "note": "示例商务政策，全部待朋友确认。资料里没有价格，回复中价格一律用占位符，由业务员手填"
+  },
+  "currency": "USD",
+  "incoterm": "FOB Shanghai",
+  "quote_validity_days": 30,
+  "moq": {
+    "en": "100 boxes per model",
+    "es": "100 cajas por modelo",
+    "zh": "每个型号 100 盒"
+  },
+  "payment": {
+    "en": "30% T/T deposit, 70% balance before shipment",
+    "es": "30% de anticipo por T/T, 70% antes del envío",
+    "zh": "30% T/T 定金，发货前付清 70% 余款"
+  },
+  "samples": {
+    "en": "Samples are available; the buyer covers courier cost",
+    "es": "Hay muestras disponibles; el comprador cubre el costo del envío",
+    "zh": "可提供样品，快递费由买家承担"
+  },
+  "needs_manager_approval": ["exclusive distribution", "price protection", "credit terms beyond policy"],
+  "signature": {
+    "en": "Overseas Sales Team\nZhejiang Jingjia Medical Technology Co., Ltd.",
+    "es": "Equipo de Ventas Internacionales\nZhejiang Jingjia Medical Technology Co., Ltd.",
+    "zh": "海外销售部\n浙江景嘉医疗科技有限公司"
+  }
+}
